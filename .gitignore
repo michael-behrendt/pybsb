@@ -34,3 +34,11 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# old cruft
+.svn
+xagent/example-mibs
+web/web2py
+logs/*.log
+testscripts/extract.sql
+testscripts/texte_*.csv
