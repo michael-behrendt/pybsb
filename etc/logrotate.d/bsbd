@@ -1,0 +1,10 @@
+/root/svn/bsb/logs/bsb*.log {
+	weekly
+	rotate 110
+	compress
+	delaycompress
+	missingok
+	notifempty
+	dateext
+        nocreate
+}

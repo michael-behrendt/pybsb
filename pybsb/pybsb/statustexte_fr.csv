@@ -1,0 +1,292 @@
+0	---
+1	STB interrogé
+2	Défaut
+3	Contrôleur interrogé
+4	Régime manuel actif
+5	Fonction ramonage, pleine charge
+6	Fonction ramonage, charge partielle
+7	Fonction ramonage active
+8	Bloqué, manuel
+9	Bloqué, automatique
+10	Bloqué
+11	Délestage au démarrage
+12	Délestage au démarrage, charge partielle
+13	Limitation du retour
+14	Limitation du retour, charge partielle
+15	Libéré
+16	Libéré, charge partielle
+17	Retard à l'arrêt activ
+18	En service
+19	Libéré
+20	Limitation minimale
+21	Limitation minimale, charge partielle
+22	Limitation minimale active
+23	Protection hors-gel de l'installation active
+24	Protection hors gel active
+25	Arrêt
+26	Fonctionnement de secours
+27	Bloqué, externe
+28	Limit. Température de source min.
+29	Haute pression pour régime PAC
+30	Contrôleur de débit source chaleur
+31	Pressostat source chaleur
+32	Limitation gaz chauds compresseur 1
+33	Limitation gaz chauds compresseur 2
+34	Limitation temp. de coupure max
+35	Durée d'arrêt compresseur min actif
+36	Compensation excédent de chaleur
+37	Temps de limitation actif
+38	Temps de marche compresseur min. actif
+39	Compensation déficit de chaleur
+40	Limitation écart condenseur max.
+41	Limitation écart condenseur min.
+42	Limitation écart évaporateur max
+43	Limitation écart évaporateur min
+44	Compresseur et résist. électr.enclenchés
+45	Compresseurs 1 et 2 allumés
+46	Compresseur 1 allumé
+47	Compresseur 2 allumé
+48	Protection hors-gel PAC
+49	Départ actif
+50	Libéré, compresseur prêt
+51	Pas de demande de chaleur
+52	Protection hors-gel du collecteur active
+53	Refroidissement adiabatique actif
+54	Température  max. du ballon atteinte
+55	Protection contre l'évaporation active
+56	Protection contre la surchauffe active
+57	Température max. de charge atteinte
+58	Charge ECS
+59	Charge ballon tampon
+60	Charge piscine
+61	Température min. de charge pas atteinte
+62	Différence de température insuffisante
+63	Rayonnement incident  insuffisant
+64	Charge électrique, fonctionnem. de secours
+65	Charge électrique, protection de la source
+66	Charge résistance électrique
+67	Charge forcée active
+68	Charge partielle active
+69	Charge active
+70	Chargé, température max. du ballon
+71	Charge, température max. de charge
+72	Charge, température de consigne charge forcée
+73	Chargé, température de consigne
+74	Charge partielle, température de consigne
+75	Chargé
+76	Froid
+77	Refroidissem. adiabatique via collecteur
+78	Refroidissement adiabat. via chaudière/CC
+79	Protection contre la décharge active
+80	Limitation du temps de charge active
+81	Charge bloquée
+82	Blocage de charge actif
+83	Forçage, température max. du ballon
+84	Forçage, température max. de charge
+85	Forçage, consigne anti-légionelles
+86	Forçage, consigne nominale
+87	Charge électrique, consigne anti-légionelles
+88	Charge électrique, consigne nominale
+89	Charge électrique, consigne réduite
+90	Charge élect., consigne de protection hors-gel
+91	Résistance électrique libérée
+92	Push, consigne anti-légionelles
+93	Push, Consigne nominale
+94	Push actif
+95	Charge, consigne anti-légionelles
+96	Charge, consigne nominale
+97	Charge, consigne réduite
+98	Chargé, température anti-légionelles
+99	Charge, température nominale
+100	Chargé, température réduite
+101	Protection hors-gel d'ambiance active
+102	Fonction séchage des chapes de béton active
+103	Restreint, protection de la chaudière
+104	Restreint, priorité ECS
+105	Restreint, tampon
+106	Régime chauffage restreint
+107	Prélèvement forcé tampon
+108	Prélèvement forcé ECS
+109	Prélèvement forcé générateur
+110	Prélèvement forcé
+111	Optimis. d'enclenchement + chauffage accéléré
+112	Optimisation d'enclenchement
+113	Réchauffement accéléré
+114	Régime chauffage Confort
+115	Optimisation de la coupure
+116	Régime chauffage réduit
+117	Protection hors-gel du départ active
+118	Régime d'été
+119	Régime Eco de jour actif
+120	Réduction réduite
+121	Réduction protection hors-gel
+122	Limitation de la température ambiante
+123	Test thermostat limit. de sécurité actif
+124	Charge restreinte
+125	Dégivrage actif
+126	Egouttage
+127	Régime refroidissement actif
+128	Régime refroidissement passif
+129	Refroidissement évaporateur
+130	Préchauffage pour dégivrage
+131	Charge électrique, dégivrage
+132	Dégivrage forcé actif
+133	Détecteur de point de rosée actif
+134	Limite de refroidissem. temp. extérieure active
+135	Durée de blocage après chauffage
+136	Relèvement consigne de départ Hygrostat
+137	Mode chauffage
+138	Arrêt Mode refroidissement
+139	Limitation min. température de coupure
+140	Arrêt chauffage / Refroidissement bloqué
+141	Protection antigel  chaudière active
+142	Refroidissement adiabatique via ECS/CC
+143	Chargé, température de charge min.
+144	Mode refroidissement limité
+145	Limite température de coupure max. Froid
+146	Mode refroidissement bloqué
+147	Chaud
+148	Mode refroidissement prêt
+149	Mode protection Refroidissement
+150	Mode refroidissement Confort
+151	Charge ECS+ballon+piscine
+152	Charge ECS+ballon
+153	Charge ECS+piscine
+154	charge ballon+piscine
+155	Mode chauffage générateur
+156	Chauffé, temp piscine max
+157	Chauffé, consigne générateur
+158	Chauffé, consigne solaire
+159	Chauffé
+160	Régime chauffage sol ART
+161	Régime chauff génér ART
+162	Chauffage à l'arrêt
+163	Aide à l'allumage activée
+164	Charge électrique, forçage
+165	Charge électrique remplacement
+166	En fonctionnement pour CC
+167	En charge partielle pour CC
+168	En service pour ECS
+169	En charge partielle pour ECS
+170	En service pour CC, ECS
+171	En charge partielle pour CC,ECS
+172	Verrouillé,chaudière comb solide
+173	Libéré pour CC, ECS
+174	Libéré pour ECS
+175	Libéré pour CC
+176	Verrouillé, température ext
+177	Limite min départ pt rosée
+178	Limite min départ temp ext
+179	Limite départ atteinte
+180	Courant triph asymétrique
+181	Basse pression
+182	Surcharge ventilateur
+183	Surcharge compresseur 1
+184	Surcharge compresseur 2
+185	Surcharge ppe évaporateur
+186	Contrôleur débit consommateur
+187	Limite utilisation T°ext min
+188	Limite utilisation T°ext max
+189	Limite temp min eau évapor.
+190	Limi T°min saumure évaporateur
+191	Limite max temp évaporateur
+192	Dégivrage forcé compresseur
+193	Dégivrage forcé ventilateur
+194	Dégivrage avec compresseur
+195	Dégivrage avec ventilateur
+196	Limit. min. T° évapo froid
+197	Résistance électrique EN
+198	Verrouillé, régime écolo
+199	Régime soutirage
+200	Prêt
+201	Charge en veille
+202	Prot. hors-gel froid active
+203	Charge complète activée
+204	Bloqué, régime chauffage
+205	Verrouillé, générateur
+206	Verrouillé, ballon stockage
+207	Durée fonct mini compr active, mode froid
+208	Compresseur 1 et 2 EN, Mode froid
+209	Compresseur 1 EN, mode froid
+210	Compresseur 2 EN, mode froid
+211	Position de dérangement
+212	Empêchement démarrage
+213	Mise hors service
+214	Temps de sécurité
+215	Démarrage
+216	Veille
+217	Retour à zéro
+218	Préventilation
+219	Post-ventilation
+220	arrêt du régulateur activé
+221	Mode maintien chaleur EN
+222	Mode maintien chaleur actif
+223	Prot. hors-gel chau eau inst
+224	Allumage
+225	Période transitoire
+226	Fonct au gaz spécial
+227	Test de dérive actif
+228	Fonctionnement spécial
+229	Mode de réglage
+230	Réglage indiv actif
+231	Démar. test de dérive manu.
+232	T° fumées, coupure
+233	T° fumées limitation puissnce
+234	T° fumées excessive
+235	Pression hydraul trop basse
+236	Prolongation confort active
+237	Transfert, cons légionelle
+238	Transfert, cons nominale
+239	Transfert, cons réduite
+240	Transfert actif
+241	Utilisation chaleur résiduelle
+242	Gestion stratification active
+243	Mode maintien chaleur libéré
+244	Générateur libéré
+245	Limiteur sécurité actif
+246	Sous-tension secteur
+247	protection antigel activée
+248	Fonct ininterrompu  pompes
+249	Charge opt Energie, nominal
+250	Charge opt Energie, legionel
+251	Charge opt Enrg fourn, nom
+252	Charge opt Enrg fourn, legio
+253	Débit trop faible
+254	Pompage fluide frigor, man
+255	Etat collectif 255
+256	Pompage fluide frigorigène
+257	Tempo démarrage dégivrage
+258	Compresseur verrouillé
+259	Verrouillé, temp source max
+260	Verrouillé, temp source min
+261	Verrouillé, temp retour max
+262	Verrouillé, temp retour min
+263	Verrouillé, temp dép max
+264	Verrouillé, temp dép min
+265	Verrouillé,temp cond max
+266	Verrouillé, temp evap min
+267	Verrouillé, tmp max gaz chd
+268	Limitation temp evap min
+269	Limitation temp cond max
+270	Limitation temp evap max
+271	Résistance élect. verrouillée
+272	Charge haute temp active
+273	Défaut démar progressif 1
+274	Défaut démar progressif 2
+275	Contrôl débit circ int évap.
+276	Pressostat circ int évapor.
+277	Régulation de qualité d'air
+278	Limitation d'humidité
+279	Ventilation commutateur
+280	Rafraîchissement nocturne
+281	Allure 1
+282	Allure 2
+283	Allure 3
+284	Ventilation rapide
+285	Rég. rafraîchiss. réduit
+286	Elévation Réduit
+287	Elévation Mode protection
+288	Durée blocage apr rafraîch
+289	Limite diff pres invers cycle
+290	Low-pressure compressor 2
+291	High-pressure compressor 2 in operation

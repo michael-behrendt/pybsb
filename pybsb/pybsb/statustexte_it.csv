@@ -1,0 +1,292 @@
+0	---
+1	SLT non connesso
+2	Errore
+3	Termost.sicur. inserito
+4	Funzionam. manuale attivo
+5	Spazzacamino, pieno carico
+6	Spazzacamino, carico parz.
+7	Funz. spazzacamino attiva
+8	Bloccato, manuale
+9	Bloccato, automatico
+10	Bloccato
+11	Protective startup, full load
+12	Avviam progr. carico parz.
+13	Return limitation, full load
+14	Limitaz. ritorno, carico parz.
+15	Released, full load
+16	Abilitato, carico parziale
+17	Ritardo arresto attivo
+18	In funzione
+19	Abilitato
+20	Min limitation, full load
+21	Limitazione min. carico parz.
+22	Limitazione minima attiva
+23	Prot. antigelo impianto attiva
+24	Protezione antigelo attiva
+25	Off
+26	Funzionam. di emergenza
+27	Bloccato, esternamente
+28	Limit. temp. sorgente min.
+29	Limitation high pressure in heat pump operation
+30	Limitation flow switch
+31	Limitation pressure switch
+32	Limit. hot-gas compress. 1
+33	Limit. hot-gas compress. 2
+34	Limite temp. spegnimento max
+35	Arresto minimo compr. attivo
+36	Compensaz. eccesso termico
+37	Periodo di limitazione attivo
+38	Funz. minimo comp. attivo
+39	Compensaz. deficit termico
+40	Limit. diff. consensat. max.
+41	Limit. diff. consensat. min.
+42	Limit. diff. evaporatore max.
+43	Limit. diff. evaporatore min.
+44	Compressor 1 and electro on
+45	Compressori 1 e 2 On
+46	Compressore 1 On
+47	Compressore 2 On
+48	Prot.antigelo pompa calore
+49	Mandata attiva
+50	Abilitato, evaporat. pronto
+51	No heat request
+52	Prot. antigelo collett. attiva
+53	Raffreddamento attivo
+54	Tmax. bollitore raggiunta
+55	Protez. evaporazione attiva
+56	Protez. antisurrisc. attiva
+57	Tmax. carico raggiunta
+58	Carico ACS
+59	Carico buffer
+60	Carico piscina
+61	Tmin. carico non raggiunta
+62	Diff. temp. insufficiente
+63	Irraggiamento insufficiente
+64	Carico el. regime emergenza
+65	Carico el. protez. sorgente
+66	Carico resistenza elettrica
+67	Carico forzato attivo
+68	Carico parziale attivo
+69	Carico attivo
+70	Caricato, Tmax. Bollitore
+71	Caricato, Tmax. carico
+72	Caricato, T forzata
+73	Caricato, temperatura nom.
+74	Caricato parz., temp. nom.
+75	Caricato
+76	Freddo
+77	Raffredd. tramite collettore
+78	Recooling via boiler/HC
+79	Protezione scarico attiva
+80	Limit. tempo di carico attiva
+81	Carico disabilitato
+82	Blocco di carico attivo
+83	Forzato, Tmax. Bollitore
+84	Forzato, Tmax. carico
+85	Forzato, setpoint antilegion.
+86	Forzato, setpoint nominale
+87	Carico el. setpoint antileg.
+88	Carico el. setpoint nominale
+89	Carico el. setpoint ridotto
+90	Carico el. setpoint antigelo
+91	Resistenza elettrica abilitata
+92	Push, setpoint antilegionella
+93	Push, setpoint nominale
+94	Push attivo
+95	Carico, setpoint legion.
+96	Carico, setpoint nominale
+97	Carico, setpoint ridotto
+98	Caricato, temp. antilegionella
+99	Caricato, temp. nominale
+100	Caricato, temp. ridotta
+101	Prot. antig ambiente attiva
+102	Funzione massetto attiva
+103	Limitato, protezione caldaia
+104	Limitato, priorità ACS
+105	Limitato, bollitore
+106	Regime riscaldamento limitato
+107	Estraz. forzata acc.
+108	Estrazione forzata ACS
+109	Estraz. forzata generatore
+110	Estrazione forzata
+111	Ottim. accens.+ risc. accel.
+112	Ottimizzazione all'accensione
+113	Riscaldamento accelerato
+114	Regime riscaldam. comfort
+115	Ottimizzaz. allo spegnimento
+116	Regime riscaldam. ridotto
+117	Prot. antigelo mandata attiva
+118	Funzionamento estivo
+119	Regime Eco diurno attivo
+120	Abbassam a setpoint ridotto
+121	Abbassam. a protez. antigelo
+122	Limit. temp. ambiente
+123	Test SLT attivo
+124	Carico limitato
+125	Disgelamento attivo
+126	Sgocciolamento
+127	Raffrescamento attivo
+128	Modo raffresc. passivo
+129	Raffredd. Evaporatore
+130	Prerisc. per sbrinam.
+131	Carico elettr., disgelamento
+132	Disgelamento forzato attivo
+133	Umidostato attivo
+134	Limite temp.esterna attivo
+135	Tempo di blocco dopo risc
+136	Incr.setp mandata igrostato
+137	Regime riscaldamento
+138	Raffrescamento spento
+139	Limite temp. spegnimento min
+140	Risc.spento/raffresc.blocc.
+141	Antigelo caldaia attivo
+142	Raffredd.tramite ACS/CR
+143	Carico, temp.carico min
+144	Modo raffresc.limitato
+145	Switch-off temperature max cooling
+146	Raffrescamento bloccato
+147	Caldo
+148	Raffrescamento pronto
+149	Modo protezione raffresc
+150	Raffrescamento comfort
+151	Caric ACS+buffer+piscina
+152	Caric ACS+buffer
+153	Caric ACS+piscina
+154	Caric buffer+piscina
+155	Regime funz.to sorg.
+156	Riscaldato, max temp piscina
+157	Riscaldato, setpoint sorg
+158	Riscaldato, setpoint solare
+159	Riscaldato
+160	Regime riscald solare off
+161	Regime riscald sorg. Off
+162	Regime riscald off
+163	Combust assistita attiva
+164	Carico elettr., forzato
+165	Carico elettr., sostituto
+166	Funzionam per CR
+167	Funzionam parz. per CR
+168	Funzionam per ACS
+169	Funzionam parz. per ACS
+170	Funzionam per CR, ACS
+171	Funzionam parz. per CR,ACS
+172	Blocco, caldaia a legna
+173	Abilitato per CR, ACS
+174	Abilitato per ACS
+175	Abilitato per CR
+176	Blocco, T.est
+177	Limit flow min dewpoint
+178	Limit flow min OT
+179	Limite mandata raggiunto
+180	Corrente 3-ph asimm.
+181	Bassa pressione
+182	Sovraccarico ventil.
+183	Sovraccarico compr 1
+184	Sovraccarico compr 2
+185	Sovracc.pompa sorgente
+186	Flussostato utenze
+187	Limite funz.to T.est min
+188	Limite funz.to T.est max
+189	Limit source temp min water
+190	Limit source temp min brine
+191	Begr Quell'temp Max Kühlen
+192	Sbrinam.forzato compr.
+193	Sbrinam.forzato ventil.
+194	Sbrinam. con compr.
+195	Sbrinam. con ventil.
+196	Limite sorg. T.min cooling
+197	Elettric. On
+198	Locked, economy operation
+199	Consumo
+200	Pronto
+201	Carico standby
+202	Prot antig.cooling attivo
+203	Pieno carico attivo
+204	Modo riscaldamento, bloccato
+205	Bloccato, sorgente
+206	Bloccato, bollitore
+207	Funz. minimo comp. cooling
+208	Compressore 1 e 2 cooling
+209	Compressore 1 On,  cooling
+210	Compressore 2 On,  cooling
+211	Blocco
+212	Prevenire start
+213	Spegnimento
+214	Tempo di sicurezza
+215	Startup
+216	Standby, attesa
+217	Home run
+218	Preventilazione
+219	Postventilazione
+220	Contr. stop attivo
+221	Modo caldo on
+222	Modo caldo attivo
+223	Protez antig ACS istant
+224	Accensione
+225	Tempo ripristino
+226	Funzionamento gas
+227	Drift test attivo
+228	Funzionam speciale
+229	Modo ripristino
+230	Singolo settag caldaia attivo
+231	Inizio drift test manuale
+232	Temp fumi, spegnim
+233	Temp fumi, output red
+234	Temp fumi troppo alta
+235	Press acqua bassa
+236	Party function active
+237	Trasferim, setp legionella
+238	Trasferim, setp nominale
+239	Trasferim, setp ridotto
+240	Trasferim attivo
+241	Uso calore residuale
+242	Ristratificazione attiva
+243	Consenso modo caldo
+244	Sorgente rilasciata
+245	Output limite SLT
+246	Alim. sottotensione
+247	Protez anticondensa attiva
+248	Funzionam continuo pompa
+249	Carico eff.energ, nom.stpt
+250	Carico eff.energ, legionella
+251	Carico eff.energ.rich.ut,nom
+252	Carico eff.energ.rich.ut,legio
+253	Flusso troppo basso
+254	arresto manuale pomp refrig
+255	Stato collettivo 255
+256	arresto pompaggio refrig
+257	Ritardo inizio sbrinamento
+258	Compressore bloccato
+259	blocco, max temp sorgente
+260	blocco, min temp sorgente
+261	blocco, max temp ritorno
+262	blocco, min temp ritorno
+263	blocco, max temp flusso
+264	blocco, min temp flusso
+265	blocco, max temp condens.
+266	blocco, min temp evapor
+267	blocco, gas caldo temp max
+268	Limit min temp evaporaz
+269	Limit max temp condens
+270	Limit max temp evaporaz
+271	Resist elettrica bloccata
+272	Carico alta temp attivo
+273	Fault soft starter 1
+274	Fault soft starter 2 E27
+275	Fluss.to sorg circ interm.
+276	Press sorg circ intermedio
+277	Controllo qualità aria
+278	Limite umidità
+279	Commut ventilazione
+280	Raffresc notturno
+281	Stadio 1
+282	Stadio 2
+283	Stadio 3
+284	Boost ventilaz
+285	Modo raggresc ridotto
+286	Aumentare Ridotto
+287	Aumentare Protezione
+288	Tempo blocco dopo raffr
+289	Limite press diff ciclo inv.
+290	Low-pressure compressor 2
+291	High-pressure compressor 2 in operation

@@ -1,0 +1,292 @@
+0	---
+1	SLT cut out
+2	Fault
+3	Switch cut out
+4	Manual operation active
+5	Chimney sweep function, full load 
+6	Chimney sweep function, partial load 
+7	Chimney sweep function active
+8	Locked, manually
+9	Locked, automatically
+10	Locked
+11	Protective startup
+12	Protective startup, partial load
+13	Return limitation
+14	Return limitation, partial load
+15	Released
+16	Released, partial load
+17	Overrun active
+18	In operation
+19	Released
+20	Min limitation
+21	Min limitation, partial load
+22	Min limitation active
+23	Frost protection for plant active
+24	Frost protection active
+25	Off
+26	Emergency operation
+27	Locked, externally
+28	Limitation source temperature min
+29	High-pressure in heat pump mode
+30	Flow switch heat source
+31	Pressure switch heat source
+32	Limitation hot-gas compressor 1
+33	Limitation hot-gas compressor 2
+34	Limitation switch-off temperature max
+35	Compressor off time min active
+36	Compensation surplus heat
+37	Limitation time active
+38	Compressor running time min active
+39	Compensation heat deficit
+40	Limitation differential condenser max
+41	Limitation differential condenser max
+42	Limitation differential evaporator max
+43	Limitation differential evaporator min
+44	Compressor and electro on
+45	Compressors 1 and 2 on
+46	Compressor 1 on
+47	Compressor 2 on
+48	Frost protection for heat pump
+49	Flow active
+50	Released, compressor ready
+51	No request
+52	Frost protection for collector active
+53	Recooling active
+54	Max storage tank temperature reached
+55	Evaporation protection active
+56	Overtemperature protection active
+57	Max charging temperature reached
+58	Charging DHW
+59	Charging buffer 
+60	Charging swimming pool
+61	Min charging temperature not reached
+62	Temperature differential insufficient
+63	Radiation insufficient
+64	Charging electric, emergency operation
+65	Charging electric, source protection
+66	Charging electric immersion heater
+67	Forced charging active
+68	Partial charging active
+69	Charging active
+70	Charged, max storage tank temperature
+71	Charged, max charging temperature
+72	Charged, forced charging required temperature
+73	Charged, required temperature
+74	Partially charged, required temperature
+75	Charged
+76	Cold
+77	Recooling via collector
+78	Recooling via heat source/HC
+79	Discharging protection active
+80	Charging time limitation active
+81	Charging locked
+82	Charging lock active
+83	Forced, max storage tank temperature
+84	Forced, max charging temperature
+85	Forced, legionella setpoint
+86	Forced, nominal setpoint
+87	Charging electric, legionella setpoint
+88	Charging electric, nominal setpoint
+89	Charging electric, reduced setpoint
+90	Charging electric, frost setpoint
+91	Electric immersion heater released
+92	Push, legionella setpoint
+93	Push, nominal setpoint
+94	Push active
+95	Charging, legionella setpoint
+96	Charging, nominal setpoint 
+97	Charging, reduced setpoint
+98	Charged, legionella temperature
+99	Charged, nominal temperature
+100	Charged, reduced temperature
+101	Room frost protection active
+102	Floor curing function active
+103	Restricted, boiler protection
+104	Restricted, DHW priority
+105	Restricted, buffer
+106	Heating operation restricted
+107	Forced consumption buffer
+108	Forced consumption DHW
+109	Forced consumption heat source
+110	Forced consumption
+111	Optimum start control + boost heating
+112	Optimum start control
+113	Boost heating
+114	Heating mode Comfort
+115	Optimum stop control
+116	Heating mode Reduced
+117	Frost protection for flow active
+118	Summer operation
+119	24-hour Eco active 
+120	Setback reduced
+121	Setback frost protection
+122	Room temperature limitation
+123	SLT test active
+124	Charging restricted
+125	Defrosting active
+126	Dripping
+127	Active cooling mode
+128	Passive cooling mode
+129	Cooling down evaporator
+130	Preheating for defrosting
+131	Electric charging, defrosting
+132	Forced defrost active
+133	Dewpoint monitor active
+134	Cooling limit outside temperature active
+135	Locking time after heating
+136	Flow temperature setpoint boost hygrostat
+137	Heating mode
+138	Cooling mode off
+139	Limit switch-off temperature min
+140	Heating off/cooling locked
+141	Boiler frost protection active
+142	Recooling via DHW/HCs
+143	Charged, min charging temp
+144	Cooling mode restricted
+145	Limitation switch-off temp max cooling
+146	Cooling mode locked
+147	Warm
+148	Cooling mode ready
+149	Protection mode cooling
+150	Cooling mode Comfort
+151	Charging DHW+buffer+pool
+152	Charging DHW+buffer
+153	Charging DHW+pool
+154	Charging buffer+pool
+155	Heating mode producer
+156	Heated, max pool temperature
+157	Heated, setpoint producer
+158	Heated, setpoint solar
+159	Heated
+160	Heating mode solar off
+161	Heating mode producer off
+162	Heating mode off
+163	Assisted firing active
+164	Charging electric, forced
+165	Charging electric, substitute
+166	In operation for HC's
+167	In partial load operation for HC's
+168	In operation for DHW
+169	In partial load operation for DHW
+170	In operation for HC's, DHW
+171	In partial load operation for HC's, DHW
+172	Locked, solid fuel boiler
+173	Released for HC's, DHW
+174	Released for DHW
+175	Released for HC's
+176	Locked, outside temp
+177	Limitation flow min dewpoint
+178	Limitation flow min outside temp
+179	Flow limit reached
+180	Three-phase current asymmetric
+181	Low-pressure
+182	Fan overload
+183	Compressor 1 overload
+184	Compressor 2 overload
+185	Source pump overload
+186	Flow switch consumers
+187	Operation limit outside temp min
+188	Operation limit outside temp max
+189	Limitation source temp min water
+190	Limitation source temp min brine
+191	Limitation source temp max
+192	Forced defrost compressor
+193	Forced defrost fan
+194	Defrost with compressor
+195	Defrost with fan
+196	Limitation source temp min cooling
+197	Electric on
+198	Locked, economy mode
+199	Consumption
+200	Ready
+201	Standby charging
+202	Frost prot cooling active
+203	Full charging active
+204	Locked, heating mode
+205	Locked, source
+206	Locked, buffer
+207	Comp run time min activ, cool
+208	Compr 1 and 2 on, cooling
+209	Compr 1 on, cooling mode
+210	Compr 2 on, cooling mode
+211	Lockout position
+212	Start prevention
+213	Shutdown
+214	Safety time
+215	Startup
+216	Standby
+217	Home run
+218	Prepurge
+219	Postpurge
+220	Controller stop active
+221	Keep hot mode on
+222	Keep hot mode active
+223	Frost prot instant heater
+224	Ignition
+225	Settling time
+226	Exotic gas operation
+227	Drift test active
+228	Special operation
+229	Setting mode
+230	Indiv boiler setting active
+231	Start man drift test
+232	Flue gas temp, switch-off
+233	Flue gas temp, output red
+234	Flue gas temp too high
+235	Water pressure too low
+236	Party function active
+237	Transfer, legionella setpoint
+238	Transfer, nominal setpoint
+239	Transfer, reduced setpoint
+240	Transfer active
+241	Residual heat usage
+242	Restratification active
+243	Keep hot mode released
+244	Source released
+245	SLT limits output
+246	Mains undervoltage
+247	Temp decrease prot active
+248	Continuous pump operation
+249	Charg opt energy, nominal
+250	Charg opt energy, legionella
+251	Charg opt energy EU, nom
+252	Charg opt energy EU, legio
+253	Flow too low
+254	Pumping off refrig, man
+255	Common state 255
+256	Pumping off refrigerant
+257	Start delay defrost
+258	Compressor locked
+259	Locked, source temp max
+260	Locked, source temp min
+261	Locked, return temp max
+262	Locked, return temp min
+263	Locked, flow temp max
+264	Locked, flow temp min
+265	Locked, cond temp max
+266	Locked, evap temp min
+267	Locked, hot-gas temp max
+268	Limitation evap temp min
+269	Limitation cond temp max
+270	Limitation evap temp max
+271	El imm heater locked
+272	High-temperature charging active
+273	Fault soft starter 1
+274	Fault soft starter 2
+275	Flow switch source intermediate circuit
+276	Pressure switch source intermediate circuit
+277	Air quality control
+278	Humidity limitation
+279	Ventilation switch
+280	Night cooling
+281	Stage 1
+282	Stage 2
+283	Stafe 3
+284	Boost ventilation
+285	Cooling mode reduced
+286	Increase Reduced
+287	Increase Protection
+288	Locking time after cooling
+289	Limitation pressure diff at process reversal
+290	Low-pressure compressor 2
+291	High-pressure compressor 2 in operation

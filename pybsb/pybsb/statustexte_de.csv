@@ -1,0 +1,292 @@
+0	---
+1	STB angesprochen
+2	Störung
+3	Wächter angesprochen
+4	Handbetrieb aktiv
+5	Schornsteinfegerfunktion, Vollast
+6	Schornsteinfegerfunktion, Teillast
+7	Schornsteinfegerfunktion aktiv
+8	Gesperrt, Manuell
+9	Gesperrt, Automatisch
+10	Gesperrt
+11	Anfahrentlastung
+12	Anfahrentlastung, Teillast
+13	Rücklaufbegrenzung
+14	Rücklaufbegrenzung, Teillast
+15	Freigegeben
+16	Freigegeben, Teillast
+17	Nachlauf aktiv
+18	In Betrieb
+19	Freigegeben
+20	Minimalbegrenzung
+21	Minimalbegrenzung, Teillast
+22	Minimalbegrenzung aktiv
+23	Anlagenfrostschutz aktiv
+24	Frostschutz aktiv
+25	Aus
+26	Notbetrieb
+27	Gesperrt, extern
+28	Begr Quellentemp Min
+29	Hochdruck bei WP-Betrieb
+30	Strömungswächter Wärmequelle
+31	Druckwächter Wärmequelle
+32	Begr Heissgas Verdichter 1
+33	Begr Heissgas Verdichter 2
+34	Begr Ausschalttempemperatur Max
+35	Verdichterstillstandzeit Min aktiv
+36	Kompensat Wärmeüberschuss
+37	Begrenzungszeit aktiv
+38	Verdichterlaufzeit Min aktiv
+39	Kompensation Wärmedefizit
+40	Begr Spreiz Kondensator Max
+41	Begr Spreiz Kondensator Min
+42	Begr Spreiz Verdampfer Max
+43	Begr Spreiz Verdampfer Min
+44	Verdichter und Elektro ein
+45	Verdichter 1 und 2 ein
+46	Verdichter 1 ein
+47	Verdichter 2 ein
+48	Frostschutz Wärmepumpe
+49	Vorlauf aktiv
+50	Freigegeben, Verdichter bereit
+51	Keine Anforderung
+52	Kollektorfrostschutz aktiv
+53	Rückkühlung aktiv
+54	Max Speichertemperatur erreicht
+55	Verdampfungsschutz aktiv
+56	Überhitzschutz aktiv
+57	Max Ladetemperatur erreicht
+58	Ladung Trinkwasser
+59	Ladung Pufferspeicher
+60	Ladung Schwimmbad
+61	Min Ladetemperatur nicht erreicht
+62	Temperaturdifferenz ungenügend
+63	Einstrahlung ungenügend
+64	Ladung Elektro, Notbetrieb
+65	Ladung Elektro, Quellenschutz
+66	Ladung Elektroeinsatz
+67	Zwangsladung aktiv
+68	Teilladung aktiv
+69	Ladung aktiv
+70	Geladen, Max Speichertemperatur
+71	Geladen, Max Ladetemperatur
+72	Geladen, Zwangslad Solltemperatur
+73	Geladen, Solltemperatur
+74	Teilgeladen, Solltemperatur
+75	Geladen
+76	Kalt
+77	Rückkühlung via Kollektor
+78	Rückkühlung via Erzeuger/HK
+79	Entladeschutz aktiv
+80	Ladezeitbegrenzung aktiv
+81	Ladung gesperrt
+82	Ladesperre aktiv
+83	Zwang, Max Speichertemperatur
+84	Zwang, Max Ladetemperatur
+85	Zwang, Legionellensollwert
+86	Zwang, Nennsollwert
+87	Ladung Elektro, Legionellensollwert
+88	Ladung Elektro, Nennsollwert
+89	Ladung Elektro, Reduziertsollwert
+90	Ladung Elektro, Frostschutzsollwert
+91	Elektroeinsatz freigegeben
+92	Push, Legionellensollwert
+93	Push, Nennsollwert
+94	Push aktiv
+95	Ladung, Legionellensollwert
+96	Ladung, Nennsollwert
+97	Ladung, Reduziertsollwert
+98	Geladen, Legionellentemperatur
+99	Geladen, Nenntemperatur
+100	Geladen, Reduzierttemperatur
+101	Raumfrostschutz aktiv
+102	Estrichfunktion aktiv
+103	Eingeschränkt, Kesselschutz
+104	Eingeschränkt, TWW-Vorrang
+105	Eingeschränkt, Puffer
+106	Heizbetrieb eingeschränkt
+107	Zwangsabnahme Puffer
+108	Zwangsabnahme TWW
+109	Zwangsabnahme Erzeuger
+110	Zwangsabnahme
+111	Einschaltoptimierung + Schnellaufheizung
+112	Einschaltoptimierung
+113	Schnellaufheizung
+114	Heizbetrieb Komfort
+115	Ausschaltoptimierung
+116	Heizbetrieb Reduziert
+117	Vorlauffrostschutz aktiv
+118	Sommerbetrieb
+119	Tages-Eco aktiv
+120	Absenkung Reduziert
+121	Absenkung Frostschutz
+122	Raumtemperaturbegrenzung
+123	STB Test aktiv
+124	Ladung eingeschränkt
+125	Abtauen aktiv
+126	Abtropfen
+127	Aktiver Kühlbetrieb
+128	Passiver Kühlbetrieb
+129	Abkühlen Verdampfer
+130	Vorwärmen für Abtauen
+131	Ladung Elektro, Abtauen
+132	Zwangsabtauen aktiv
+133	Taupunktwächter aktiv
+134	Kühlgrenze Aussentemperatur aktiv
+135	Sperrdauer nach Heizen
+136	Vorlaufsollwertanhebung Hygrostat
+137	Heizbetrieb
+138	Kühlbetrieb aus
+139	Begrenzung Ausschalttemperatur Min
+140	Heizen aus / Kühlen gesperrt
+141	Kesselfrostschutz aktiv
+142	Rückkühlung via TWW/Hk's
+143	Geladen, Min Ladetemp
+144	Kühlbetrieb eingeschränkt
+145	Begrenzung Ausschalttemperatur Max Kühlen
+146	Kühlbetrieb gesperrt
+147	Warm
+148	Kühlbetrieb bereit
+149	Schutzbetrieb Kühlen
+150	Kühlbetrieb Komfort
+151	Ladung TWW+Puffer+Schwimmbad
+152	Ladung Trinkwasser+Puffer
+153	Ladung Trinkwasser+Schwimmbad
+154	Ladung Puffer+Schwimmbad
+155	Heizbetrieb Erzeuger
+156	Geheizt, Max Schw'badtemp
+157	Geheizt, Sollwert Erzeuger
+158	Geheizt, Sollwert Solar
+159	Geheizt
+160	Heizbetrieb Solar aus
+161	Heizbetrieb Erzeuger aus
+162	Heizbetrieb aus
+163	Anfeuerungshilfe aktiv
+164	Ladung Elektro, Zwang
+165	Ladung Elektro, Ersatz
+166	In Betrieb für Heizkreis
+167	In Teillastbetrieb für HK
+168	In Betrieb für Trinkwasser
+169	In Teillastbetrieb für TWW
+170	In Betrieb für HK,TWW
+171	In Teillastbetrieb für HK,TWW
+172	Gesperrt, Feststoffkessel
+173	Freigegeben für Hk,TWW
+174	Freigegeben für TWW
+175	Freigegeben für HK
+176	Gesperrt, Aussentemperatur
+177	Begr Vorlaufmin Taupunkt
+178	Begr Vorlaufmin Aussentemp
+179	Vorlaufgrenze erreicht
+180	Drehstrom asymetrisch
+181	Niederdruck
+182	Ventilator überlastet
+183	Verdichter 1 überlastet
+184	Verdichter 2 überlastet
+185	Quellenpumpe überlastet
+186	Ström'wächter Verbraucher
+187	Einsatzgrenze TA Min
+188	Einsatzgrenze TA Max
+189	Begr Quellentemp Min Wasser
+190	Begr Quellentemp Min Sole
+191	Begr Quellentemp Max
+192	Zwangsabtauen Verdichter
+193	Zwangsabtauen Ventilator
+194	Abtauen mit Verdichter
+195	Abtauen mit Ventilator
+196	Begr Quellentemp Min Kühlen
+197	Elektro ein
+198	Gesperrt, Oekobetrieb
+199	Zapfbetrieb
+200	Bereit
+201	Bereitschaftsladung
+202	Frostschutz Kühlen aktiv
+203	Durchladung aktiv
+204	Gesperrt, Heizbetrieb
+205	Gesperrt, Erzeuger
+206	Gesperrt, Puffer
+207	Verdichterlaufzeit Min aktiv, Kühlbetrieb
+208	Verdichter 1 und 2 ein, Kühlbetrieb
+209	Verdichter 1 ein, Kühlbetrieb
+210	Verdichter 2 ein, Kühlbetrieb
+211	Störstellung
+212	Startverhinderung
+213	Ausserbetriebsetzung
+214	Sicherheitszeit
+215	Inbetriebsetzung
+216	Standby
+217	Heimlauf
+218	Vorlüftung
+219	Nachlüftung
+220	Reglerstopp aktiv
+221	Warmhaltebetrieb Ein
+222	Warmhaltebetrieb Aktiv
+223	Frostschutz Durchlauferhitzer
+224	Zünden
+225	Einschwingzeit
+226	Exotengasbetrieb
+227	Drifttest aktiv
+228	Sonderbetrieb
+229	Einstellbetrieb
+230	Exemplareinstellung aktiv
+231	Start man. Drifttest
+232	Abgastemperatur zu hoch, Abschaltung
+233	Abgastemperatur zu hoch, Leistungsbegrenzung
+234	Abgastemperatur zu hoch
+235	Wasserdruck zu niedrig
+236	Partyfunktion aktiv
+237	Umladung, Legionellensollwert
+238	Umladung, Nennsollwert
+239	Umladung, Reduziertsollwert
+240	Umladung aktiv
+241	Restwärmenutzung
+242	Umschichtung aktiv
+243	Warmhaltebetrieb freigegeb
+244	Erzeuger freigegeben
+245	STB begrenzt Leistung
+246	Netzunterspannung
+247	Unterkühlschutz aktiv
+248	Pumpendauerlauf
+249	Ladung opt Energie, Nennsollwert
+250	Ladung opt Energie, Legionellensollwert
+251	Ladung opt Energie EW, Nennsollwert
+252	Ladung opt Energie EW, Legionellensollwert
+253	Durchfluss gering
+254	Kältemittel abpumpen, Manuell
+255	Sammelzustand 255
+256	Kältemittel abpumpen
+257	Startverzögerung Abtauen
+258	Verdichter gesperrt
+259	Gesperrt, Quellentemp Max
+260	Gesperrt, Quellentemp Min
+261	Gesperrt, Rücklauftemp Max
+262	Gesperrt, Rücklauftemp Min
+263	Gesperrt, Vorlauftemp Max
+264	Gesperrt, Vorlauftemp Min
+265	Gesperrt, Kondens'temp Max
+266	Gesperrt, Verdamp'temp Min
+267	Gesperrt, Heissgastemp Max
+268	Begr Verdampfungstemp Min
+269	Begr Kondensationstemp Max
+270	Begr Verdampfungstemp Max
+271	Elektroeinsatz gesperrt
+272	Hochtemperaturladung aktiv
+273	Störung Sanftanlasser 1
+274	Störung Sanftanlasser 2
+275	Strömungswächter Quellenzwischenkreis
+276	Druckwächter Quellenzwischenkreis
+277	Luftqualitätsregelung
+278	Feuchtebegrenzung
+279	Lüftungsschalter
+280	Nachtkühlung
+281	Stufe 1
+282	Stufe 2
+283	Stufe 3
+284	Stosslüften
+285	Kühlbetrieb Reduziert
+286	Anhebung Reduziert
+287	Anhebung Schutzbetrieb
+288	Sperrdauer nach Kühlen
+289	Begr Druckdifferenz Prozessumkehr
+290	Niederdruck Verdichter 2
+291	Hochdruck Verdichter 2 bei Betrieb

@@ -1,0 +1,190 @@
+HEULESOFT-REG-MIB DEFINITIONS ::= BEGIN
+
+--
+--                    HeuleSoft
+--              SMI Registrations MIB
+--                      SMIv2
+--                   October 2013
+--
+--
+-- This MIB registers certain high level node definitions,
+-- under which all HeuleSoft MIBs are organized.
+--
+--
+-- The objects defined in this MIB are located under the
+-- private.enterprises subtree as shown below:
+--
+--
+--
+--   iso(1).org(3).dod(6).internet(1)
+--                           |
+--                        private(4)
+--                           |
+--                      enterprises(1)
+--                           |
+--                   heulesoft(42507)
+--                           |
+--              _____________|___________
+--             |                         |
+--    heulesoftExperimental(1)   heulesoftRegistrations(2)
+--                                       |
+--                                       |
+--                  _____________________|________________________________________
+--                 |                                |                             |          
+--                 |                                |                             |
+--    heulesoftGlobalRegistrations(1)        heulesoftProducts(2)          heulesoftBSB(3)
+--
+--
+--
+--
+-- OBJECT SUMMARY:
+--
+-- All objects within this MIB are prefixed with the OBJECT IDENTIFIER "hs"
+-- where "hs" is defined by:
+--
+--      iso(1).org(3).dod(6).internet(1).private(4).enterprises(1).
+--      heulesoft(42507)
+--
+-- OBJECT NAME                                       OBJECT OID
+-- ----------------------------------------          ---------------------
+--
+-- heulesoftExperimental                             hs.1
+-- heulesoftRegistrations                            hs.2
+--   heulesoftGlobalRegistrations                    hs.2.1
+--   heulesoftProducts                               hs.2.2
+--   heulesoftBSB                                    hs.2.3
+--
+
+
+      IMPORTS
+          MODULE-IDENTITY, OBJECT-IDENTITY, enterprises, Integer32
+              FROM SNMPv2-SMI
+          TEXTUAL-CONVENTION
+              FROM SNMPv2-TC;
+
+
+
+
+      heulesoft MODULE-IDENTITY
+      LAST-UPDATED "201310090000Z"
+      ORGANIZATION "HeuleSoft"
+      CONTACT-INFO
+      "Heule Daniel
+       HeuleSoft
+
+       daniel.heule@heulesoft.ch
+
+       www.heulesoft.ch"
+
+      DESCRIPTION
+       "This MIB defines high level nodes that are used to
+        organize HeuleSoft Registrations and
+        MIBs into ordered groups.
+
+        This MIB also contains HeuleSoft Enterprise-specific
+        Textual Convention definitions.
+
+        This MIB is intended to be IMPORT'ed by all other
+        HeuleSoft MIBs.
+
+        HeuleSoft reserves the right to make changes in
+        specifications and other information contained
+        in this document without prior notice.
+        The reader should contact HeuleSoft to determine
+        whether or not such changes have been made.
+
+        In no event shall HeuleSoft be liable for any
+        incidental, indirect, special, or consequential damages
+        whatsoever (including but not limited to lost profits)
+        arising out of or related to this document or the
+        information contained in it, even if HeuleSoft has
+        been advised of, known, or should have known, the
+        possibility of such damages.
+
+        HeuleSoft grants vendors, end-users, and other interested
+        parties a non-exclusive license to use this specification
+        in connection with the management of HeuleSoft products.
+
+        Copyright October 2013 HeuleSoft."
+
+        REVISION      "201310090000Z"
+        DESCRIPTION
+        "First Release."
+
+        ::= { enterprises 42507}
+
+
+--
+-- HeuleSoft Experimental Registrations
+--
+
+heulesoftExperimental OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "All experimental MIBs are organized under
+        this node. When those MIBs have been fully developed and tested,
+        they will be moved under the heulesoftRegistrations Node.
+        MIBs which are in Beta-test status may also appear
+        under this experimental node."
+    ::= { heulesoft 1 }
+
+--
+-- HeuleSoft Registrations for Released MIBs and Global Registrations
+--
+
+heulesoftRegistrations OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "All MIBs (that have completed testing),
+        along with associated registration data, are
+        organized under this node. This includes Global
+        Registrations, Product MIBs, and registration of
+        MIBs in other categories."
+    ::= { heulesoft 2 }
+
+
+--
+-- HeuleSoft Global Registrations
+--
+
+heulesoftGlobalRegistrations OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+      "This node is intended for global registration information
+       only. EG, OID definitions that register products."
+    ::= { heulesoftRegistrations 1 }
+
+
+--
+-- HeuleSoft Product MIB Registrations
+--
+
+heulesoftProducts OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "All HeuleSoft Product MIBs are organized
+        under this node."
+    ::= { heulesoftRegistrations 2 }
+
+
+heulesoftBSB OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "All HeuleSoft BSB MIBs are
+        organized under this node"
+    ::= { heulesoftRegistrations 3 }
+
+
+--
+-- HeuleSoft Corporation unique TEXTUAL-CONVENTION definitions
+--
+
+--   Textual descriptions
+MilliDegree ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d-3"
+    STATUS       current
+    DESCRIPTION  "Represents milli degrees celsius"
+    SYNTAX       Integer32
+
+
+END

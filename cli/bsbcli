@@ -1,0 +1,209 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# bsbcli -- send and recive messages to the bsb.py daemon
+# Copyright (C) 2013  Daniel Heule <daniel.heule@gmail.com>
+#
+# This file is part of pybsb.
+#
+# pybsb is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License.
+#
+# pybsb is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with pybsb.  If not, see <http://www.gnu.org/licenses/>.
+
+__author__ = "Daniel Heule"
+__copyright__ = "Copyright 2013, Daniel Heule"
+__credits__ = ["Daniel Heule"]
+__license__ = "GPL"
+__version__ = "0.1.1"
+__maintainer__ = "Daniel Heule"
+__email__ = "daniel.heule@gmail.com"
+__status__ = "Development"
+
+import socket
+import json
+import time
+import datetime
+import argparse
+import sys
+sys.path.append('../pybsb')
+import pybsb
+
+
+
+
+parser = argparse.ArgumentParser(
+    description='BSB Command Line Interface',
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    epilog='''for parameter submit a known value or a 4byte in hex string, known values:
+  %s
+or:
+  00000000 - ffffffff
+               
+Happy monitoring your bsb bus ;-)''' % '\n  '.join(sorted(pybsb.jsonrequest.keys())))
+group = parser.add_mutually_exclusive_group()
+group.add_argument('-v','--verbose', help="increase output verbosity", action='store_true' )
+group.add_argument('-q','--quiet', help="be quiet", action='store_true' )
+parser.add_argument('--version', action='version', version='bsbcli ' + __version__)
+parser.add_argument('--debug', help='show what\'s going on ...',action='store_true')
+parser.add_argument('-m','--mode',help='operation mode',choices=['get', 'set', 'bustrace','loglevel'],default='get')
+parser.add_argument('-t','--timeout', help='how long do we bustrace ? ...',type=int,default=30)
+parser.add_argument('-l','--loglevel',help='swiches the loglevel from the daemon',choices=['debug', 'info', 'warning','error','critical'])
+parser.add_argument('-n','--newval',help='new value for parameter if mode is set')
+parser.add_argument('parameter',help='parameter to set/get', nargs='?', default='roomtemp')
+args = parser.parse_args()
+#print args
+
+
+
+
+
+
+if args.mode == 'get' or args.mode == 'set':
+    rjson = { 
+          'onlycache' : False }
+    if args.parameter in pybsb.jsonrequest:
+        rjson.update(pybsb.jsonrequest[args.parameter])
+    else:
+        if len(args.parameter) == 8:
+            try:
+                args.parameter.decode('hex')
+                rjson['PARAM'] = args.parameter
+            except TypeError as e:
+                print >>sys.stderr, 'error: problem to decode parameter as hex: %s' % e.message
+                exit(240)
+        else:
+            print >>sys.stderr, 'error: hex string need 8 hex digits'
+            exit(241)
+    if args.mode == 'set':
+        if args.newval != None:
+            if args.parameter in pybsb.jsonrequest:
+                rjson['newval'] = args.newval
+                rjson['set'] = True
+                rjson['cached'] = 0
+            else:
+                print >>sys.stderr, 'error: mode set only implemented for named parameters'
+        else:
+            print >>sys.stderr, 'error: for mode set, parameter -n / --newval is required !'
+        
+          
+elif args.mode == 'bustrace':
+    rjson    = { 'PARAM' : 'ffffffff',
+                'timeout': args.timeout ,
+                'busdump': True,
+                'nosend' : True }
+                
+elif args.mode == 'loglevel':
+    if args.loglevel != None:
+        rjson = { 'loglevel' : args.loglevel}
+    else:
+        print >>sys.stderr, 'error: parameter -l/--loglevel must be set on this mode'
+        exit(240)
+else:
+    print >>sys.stderr, 'unknown operation mode ...'
+
+
+js = json.JSONDecoder()
+
+try:
+    s = socket.socket()
+    if args.debug:
+        print >>sys.stderr, 'trying to connect to localhost:12000' 
+    s.connect((pybsb.client_target,pybsb.port))
+    fromt = time.time()
+    if args.debug:
+        print >>sys.stderr, 'sending json: %s' %  json.dumps(rjson)
+    if args.verbose:
+        print 'Sending Request to bsb daemon:'
+        for i in rjson:
+            print u'{0:20} : {1}'.format(i,rjson[i])
+        print '============================================================'
+    s.send(json.dumps(rjson) + '\n\n')
+    f = s.makefile()
+    if args.mode == 'bustrace':
+        l=''
+        for line in f:
+            ll = l.strip()
+            l = line
+            if l == '\n':
+                if args.debug:
+                    print >>sys.stderr, 'recived: %s' %  ll
+                try:
+                    if args.debug:
+                        print >>sys.stderr, 'try to decode json'
+                    a = json.loads(ll)
+                    if args.debug:
+                        print >>sys.stderr, 'decoding done:'
+                        print >>sys.stderr, a
+                    try:
+                        if not args.quiet:
+                            if 'timestamp' in a:
+                                print str(datetime.datetime.fromtimestamp(a['timestamp']))
+                            else:
+                                print datetime.datetime.now()
+                            if 'error' in a:
+                                print a['error']
+                            print a['msgdump']
+                        else:
+                            if 'error' in a:
+                                print a['error']
+                            else:
+                                print u'{0:40} : {1}'.format(a['paramname'],a['value'])
+                    except KeyError:
+                        print a
+                except ValueError as e:
+                    print 'Json decoding of %s failed: %s' % (ll, e.message )
+    else:
+        line1 = f.readline()
+        line2 = f.readline()
+        if args.debug:
+            print >>sys.stderr, 'recived: %s' %  line1
+            print >>sys.stderr, 'recived: %s' %  line2
+        if line2 == '\n':
+            try:
+                a = json.loads(line1)
+                try:
+                    if args.mode == 'loglevel':
+                        print u'Now set loglevel of the daemon to %s' % a['newloglevel']
+                    else:
+                        if args.verbose:
+                            print 'Recieved following answer from bsb daemon:'
+                            for i in a:
+                                print u'{0:20} : {1}'.format(i,a[i])
+                            print '============================================================'
+                        if not args.quiet:
+                            if 'timestamp' in a:
+                                print '{0:20} : {1}'.format('Messzeitpunkt',str(datetime.datetime.fromtimestamp(a['timestamp'])))
+                            else:
+                                print '{0:20} : {1}'.format('Empfangszeitpunkt',datetime.datetime.now())
+                            print '{0:20} : {1:.5f}s'.format('Abfragezeitdauer',time.time() - fromt )
+                            if 'error' in a:
+                                print u'{0:20} : {1}'.format('ERROR',a['error'])
+                                exit(254)
+                            else:
+                                print u'{0:20} : {1}'.format('Parametername',a['paramname'])
+                                if a['unitdisplay'] == True:
+                                    print u'{0:20} : {1} {2}'.format('Parameterwert',a['value'], a['unit'])
+                                else:
+                                    print u'{0:20} : {1}'.format('Parameterwert',a['value'])
+                        else:
+                            if 'error' in a:
+                                print 'ERROR :',a['error']
+                                exit(253)
+                            elif a['unitdisplay'] == True:
+                                print a['value'], a['unit']
+                            else:
+                                print a['value']
+                except KeyError:
+                    print a
+            except ValueError as e:
+                print 'Json decoding of %s failed: %s' % (line1, e.message )
+                raise e
+finally:
+    s.close()

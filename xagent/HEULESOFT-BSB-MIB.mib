@@ -1,0 +1,1376 @@
+HEULESOFT-BSB-MIB DEFINITIONS ::= BEGIN
+
+--
+--                    HeuleSoft
+--                     BSB MIB
+--                      SMIv2
+--                   October 2013
+--
+--
+-- This MIB registers certain high level node definitions,
+-- under which all HeuleSoft MIBs are organized.
+--
+--
+-- The objects defined in this MIB are located under the
+-- private.enterprises subtree as shown below:
+--
+--
+--
+--   iso(1).org(3).dod(6).internet(1)
+--                           |
+--                        private(4)
+--                           |
+--                      enterprises(1)
+--                           |
+--                   heulesoft(42507)
+--                           |
+--              _____________|___________
+--             |                         |
+--    heulesoftExperimental(1)   heulesoftRegistrations(2)
+--                                       |
+--                                       |
+--                  _____________________|________________________________________
+--                 |                                |                             |          
+--                 |                                |                             |
+--    heulesoftGlobalRegistrations(1)        heulesoftProducts(2)          heulesoftBSB(3)
+--
+--
+--
+--
+-- OBJECT SUMMARY:
+--
+-- All objects within this MIB are prefixed with the OBJECT IDENTIFIER "hsbsb"
+-- where "hsbsb" is defined by:
+--
+--      iso(1).org(3).dod(6).internet(1).private(4).enterprises(1).
+--      heulesoft(42507).heulesoftRegistrations(2).heulesoftBSB(3)
+--
+-- OBJECT NAME                                       OBJECT OID
+-- ----------------------------------------          ---------------------
+--
+-- hsBSBMIB                                          hsbsb.1
+--  hsBSBNoMenu                                      hsbsb.1.1
+--    hsBSBStWP                                      hsbsb.1.1.1
+--      hsBSBStatusWP                                hsbsb.1.1.1.1
+--      hsBSBStatusWPTxt                             hsbsb.1.1.1.2
+--      hsBSBStatusWPRealVal                         hsbsb.1.1.1.3
+--    hsBSBStTw                                      hsbsb.1.1.2
+--      hsBSBStatusTw                                hsbsb.1.1.2.1
+--      hsBSBStatusTwTxt                             hsbsb.1.1.2.2
+--      hsBSBStatusTwRealVal                         hsbsb.1.1.2.3
+--  hsBSBKonfiguration                               hsbsb.1.2
+--  hsBSBStatus                                      hsbsb.1.3
+--  hsBSBError                                       hsbsb.1.4
+--  hsBSBWartung                                     hsbsb.1.5
+--  hsBSBZeitprogramme                               hsbsb.1.6
+--     hsBSBZeitprogHK1                              hsbsb.1.6.1
+--     hsBSBZeitprogHK2                              hsbsb.1.6.2
+--     hsBSBZeitprogHK3                              hsbsb.1.6.3
+--     hsBSBZeitprogHK4                              hsbsb.1.6.4
+--  hsBSBTrinkwasser                                 hsbsb.1.7
+--     hsBSBTwNennSoll                               hsbsb.1.7.1
+--       hsBSBTwNennSollTemp                         hsbsb.1.7.1.1
+--       hsBSBTwNennSollTempTxt                      hsbsb.1.7.1.2
+--     hsBSBTwRedSoll                                hsbsb.1.7.2
+--       hsBSBTwRedSollTemp                          hsbsb.1.7.2.1
+--       hsBSBTwRedSollTempTxt                       hsbsb.1.7.2.2
+--  hsBSBTrinkwasserspeicher                         hsbsb.1.8
+--  hsBSBKessel                                      hsbsb.1.9
+--  hsBSBFeuerungsautomat                            hsbsb.1.10
+--  hsBSBHeizkreise                                  hsbsb.1.11
+--    hsBSBHK1                                       hsbsb.1.11.1
+--    hsBSBHK2                                       hsbsb.1.11.2
+--    hsBSBHK3                                       hsbsb.1.11.3
+--    hsBSBHK4                                       hsbsb.1.11.4
+--  hsBSBFerien                                      hsbsb.1.12
+--    hsBSBFerHK1                                    hsbsb.1.12.1
+--    hsBSBFerHK2                                    hsbsb.1.12.2
+--    hsBSBFerHK3                                    hsbsb.1.12.3
+--    hsBSBFerHK4                                    hsbsb.1.12.4
+--  hsBSBDiagnose                                    hsbsb.1.13
+--    hsBSBDiaErzeuger                               hsbsb.1.13.1
+--      hsBSBQuIn                                    hsbsb.1.13.1.1
+--       hsBSBQuelleInTemp                           hsbsb.1.13.1.1.1
+--       hsBSBQuelleInTempTxt                        hsbsb.1.13.1.1.2
+--      hsBSBQuOut                                   hsbsb.1.13.1.2
+--       hsBSBQuelleOutTemp                          hsbsb.1.13.1.2.1
+--       hsBSBQuelleOutTempTxt                       hsbsb.1.13.1.2.2
+--      hsBSBVorlaufWP                               hsbsb.1.13.1.3
+--       hsBSBVorlaufWPTemp                          hsbsb.1.13.1.3.1
+--       hsBSBVorlaufWPTempTxt                       hsbsb.1.13.1.3.2
+--      hsBSBRuecklaufWP                             hsbsb.1.13.1.4
+--       hsBSBRuecklaufWPTemp                        hsbsb.1.13.1.4.1
+--       hsBSBRuecklaufWPTempTxt                     hsbsb.1.13.1.4.2
+--      hsBSBRuecklaufSollWP                         hsbsb.1.13.1.5
+--       hsBSBRuecklaufSollWPTemp                    hsbsb.1.13.1.5.1
+--       hsBSBRuecklaufSollWPTempTxt                 hsbsb.1.13.1.5.2
+--    hsBSBDiaVerbraucher                            hsbsb.1.13.2
+--      hsBSBRoomt                                   hsbsb.1.13.2.1
+--        hsBSBRoom1t                                hsbsb.1.13.2.1.1
+--          hsBSBRoom1Temp                           hsbsb.1.13.2.1.1.1
+--          hsBSBRoom1TempTxt                        hsbsb.1.13.2.1.1.2
+--        hsBSBRoom2t (Not yet implemented ...)      hsbsb.1.13.2.1.2
+--      hsBSBRoomSoll                                hsbsb.1.13.2.2
+--        hsBSBRoom1Soll                             hsbsb.1.13.2.2.1
+--          hsBSBRoom1SollTemp                       hsbsb.1.13.2.2.1.1
+--          hsBSBRoom1SollTempTxt                    hsbsb.1.13.2.2.1.2
+--      hsBSBVorlaufSoll                             hsbsb.1.13.2.3
+--        hsBSBVorlauf1Soll                          hsbsb.1.13.2.3.1
+--          hsBSBVorlauf1SollTemp                    hsbsb.1.13.2.3.1.1
+--          hsBSBVorlauf1SollTempTxt                 hsbsb.1.13.2.3.1.2
+--      hsBSBVorlauf                                 hsbsb.1.13.2.4
+--        hsBSBVorlauf1                              hsbsb.1.13.2.4.1
+--          hsBSBVorlauf1Temp                        hsbsb.1.13.2.4.1.1
+--          hsBSBVorlauf1TempTxt                     hsbsb.1.13.2.4.1.2
+--      hsBSBOutT                                    hsbsb.1.13.2.5
+--        hsBSBOutTAct                               hsbsb.1.13.2.5.1
+--          hsBSBOutTActTemp                         hsbsb.1.13.2.5.1.1
+--          hsBSBOutTActTempTxt                      hsbsb.1.13.2.5.1.2
+--        hsBSBOutTGed                               hsbsb.1.13.2.5.2
+--          hsBSBOutTGedTemp                         hsbsb.1.13.2.5.2.1
+--          hsBSBOutTGedTempTxt                      hsbsb.1.13.2.5.2.2
+--        hsBSBOutTGem                               hsbsb.1.13.2.5.3
+--          hsBSBOutTGemTemp                         hsbsb.1.13.2.5.3.1
+--          hsBSBOutTGemTempTxt                      hsbsb.1.13.2.5.3.2
+--      hsBSBTw                                      hsbsb.1.13.2.6
+--        hsBSBTwSoll                                hsbsb.1.13.2.6.1
+--          hsBSBTwSollTemp                          hsbsb.1.13.2.6.1.1
+--          hsBSBTwSollTempTxt                       hsbsb.1.13.2.6.1.2
+--        hsBSBTwTemp1                               hsbsb.1.13.2.6.2
+--          hsBSBTwTemp1Temp                         hsbsb.1.13.2.6.2.1
+--          hsBSBTwTemp1TempTxt                      hsbsb.1.13.2.6.2.2
+--        hsBSBTwTemp2                               hsbsb.1.13.2.6.3
+--          hsBSBTwTemp2Temp                         hsbsb.1.13.2.6.3.1
+--          hsBSBTwTemp2TempTxt                      hsbsb.1.13.2.6.3.2
+--  hsBSBLastUpdateInfo                              hsbsb.1.100
+--    hsBSBLastUpdateTime                            hsbsb.1.100.1
+--  hsBSBConformance                                 hsbsb.1.9999
+--       hsBSBConformanceGroups                      hsbsb.1.9999.1
+--          hsBSBStatusDataGroup                     hsbsb.1.9999.1.1
+--          hsBSBTrinkwasserDataGroup                hsbsb.1.9999.1.7
+--          hsBSBDiagnoseDataGroup                   hsbsb.1.9999.1.13
+--          hsBSBStatusDataGroup                     hsbsb.1.9999.1.100
+--       hsBSBCompliance                             hsbsb.1.9999.2
+
+
+      IMPORTS
+          MODULE-IDENTITY, OBJECT-IDENTITY, NOTIFICATION-TYPE,
+          OBJECT-TYPE, Unsigned32, Integer32, Counter32
+              FROM SNMPv2-SMI
+
+          OBJECT-GROUP, NOTIFICATION-GROUP, MODULE-COMPLIANCE
+              FROM SNMPv2-CONF
+
+          DisplayString, TruthValue
+              FROM SNMPv2-TC
+
+          heulesoftBSB, MilliDegree
+              FROM HEULESOFT-REG-MIB;
+
+
+
+     heulesoftBSBMIB  MODULE-IDENTITY
+      LAST-UPDATED "201310090000Z"
+     ORGANIZATION "HeuleSoft"
+      CONTACT-INFO
+      "Heule Daniel
+       HeuleSoft
+
+       daniel.heule@heulesoft.ch
+
+       www.heulesoft.ch"
+
+      DESCRIPTION
+       "This MIB defines Nodes and Data Objects to support
+        my BSB-Busdaemon.
+
+        HeuleSoft reserves the right to make changes in
+        specifications and other information contained
+        in this document without prior notice.
+        The reader should contact HeuleSoft to determine
+        whether or not such changes have been made.
+
+        In no event shall HeuleSoft be liable for any
+        incidental, indirect, special, or consequential damages
+        whatsoever (including but not limited to lost profits)
+        arising out of or related to this document or the
+        information contained in it, even if HeuleSoft has
+        been advised of, known, or should have known, the
+        possibility of such damages.
+
+        HeuleSoft grants vendors, end-users, and other interested
+        parties a non-exclusive license to use this specification
+        in connection with the management of HeuleSoft products.
+
+        Copyright October 2013 HeuleSoft."
+
+        REVISION      "201310090000Z"
+        DESCRIPTION
+        "Rolling First Release."
+
+        ::= { heulesoftBSB 1 }
+
+
+
+--
+--    hsBSBNoMenu                          hsbsb.1.1
+--
+
+hsBSBNoMenu OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Infos aviable on BSB Bus without a Menu entry"
+    ::= { heulesoftBSBMIB 1 }
+
+
+
+
+--
+--    hsBSBStWP                            hsbsb.1.1.1
+--
+
+hsBSBStWP OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Different Representation of the WP Status"
+    ::= { hsBSBNoMenu 1 }
+
+--    hsBSBStatusWP                        hsbsb.1.1.1.1
+
+hsBSBStatusWP   OBJECT-TYPE
+    SYNTAX      INTEGER { off(1), on(2) }
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current status (on/off) of the wp as int"
+    ::= { hsBSBStWP 1 }   
+    
+--    hsBSBStatusWPTxt                     hsbsb.1.1.1.2
+
+hsBSBStatusWPTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current status of the wp as txt"
+    ::= { hsBSBStWP 2 }
+
+--    hsBSBStatusWPRealVal                 hsbsb.1.1.1.3
+
+hsBSBStatusWPRealVal   OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current status of the wp, Technical Value without conversion"
+    ::= { hsBSBStWP 3 }
+ 
+
+
+
+
+
+--
+--    hsBSBStTw                            hsbsb.1.1.2
+--
+
+hsBSBStTw OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Different Representation of the Drinkwater Status"
+    ::= { hsBSBNoMenu 2 }
+
+--    hsBSBStatusWP                        hsbsb.1.1.2.1
+
+hsBSBStatusTw   OBJECT-TYPE
+    SYNTAX      INTEGER { geladen(1), laden(2) }
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current status (geladen/laden) of the tw as int"
+    ::= { hsBSBStTw 1 }   
+    
+--    hsBSBStatusWPTxt                     hsbsb.1.1.2.2
+
+hsBSBStatusTwTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current status of the tw as txt"
+    ::= { hsBSBStTw 2 }
+
+--    hsBSBStatusWPRealVal                 hsbsb.1.1.2.3
+
+hsBSBStatusTwRealVal   OBJECT-TYPE
+    SYNTAX      INTEGER
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current status of the tw, Technical Value without conversion"
+    ::= { hsBSBStTw 3 }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+--    hsBSBKonfiguration                   hsbsb.1.2
+--
+
+hsBSBKonfiguration OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Konfiguration of our BSB client"
+    ::= { heulesoftBSBMIB 2 }
+
+
+--
+--    hsBSBStatus                          hsbsb.1.3
+--
+
+hsBSBStatus OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Status Menu entries"
+    ::= { heulesoftBSBMIB 3 }
+
+
+
+--
+--    hsBSBError                           hsbsb.1.4
+--
+
+hsBSBError OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Error Menu entries"
+    ::= { heulesoftBSBMIB 4 }
+
+
+--
+--    hsBSBWartung                         hsbsb.1.5
+--
+
+hsBSBWartung OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Wartung Menu entries"
+    ::= { heulesoftBSBMIB 5 }
+
+
+--
+--    hsBSBZeitprogramme                   hsbsb.1.6
+--
+
+hsBSBZeitprogramme OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Zeitprogramme Menu entries"
+    ::= { heulesoftBSBMIB 6 }
+
+
+--    hsBSBZeitprogHK1                     hsbsb.1.6.1
+
+hsBSBZeitprogHK1 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Zeitprogramme Heizkreis 1"
+    ::= { hsBSBZeitprogramme 1 }
+
+
+--    hsBSBZeitprogHK2                     hsbsb.1.6.2
+
+hsBSBZeitprogHK2 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Zeitprogramme Heizkreis 2"
+    ::= { hsBSBZeitprogramme 2 }
+
+
+
+--    hsBSBZeitprogHK3                     hsbsb.1.6.3
+
+hsBSBZeitprogHK3 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Zeitprogramme Heizkreis 3"
+    ::= { hsBSBZeitprogramme 3 }
+
+
+--    hsBSBZeitprogHK4                     hsbsb.1.6.4
+
+hsBSBZeitprogHK4 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Zeitprogramme Heizkreis 4"
+    ::= { hsBSBZeitprogramme 4 }
+
+
+
+--
+--    hsBSBTrinkwasser                     hsbsb.1.7
+--
+
+hsBSBTrinkwasser OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Trinkwasser Menu entries"
+    ::= { heulesoftBSBMIB 7 }
+
+
+
+--    hsBSBTwNennSoll                      hsbsb.1.7.1
+
+hsBSBTwNennSoll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Nennsollwert Trinkwasser"
+    ::= { hsBSBTrinkwasser 1 }
+
+
+--    hsBSBTwNennSollTemp                  hsbsb.1.7.1.1
+
+hsBSBTwNennSollTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current Nennsollwert Trinkwasser in degrees celsius"
+    ::= { hsBSBTwNennSoll 1 }   
+
+
+--    hsBSBRoomtempTxt                     hsbsb.1.7.1.2
+
+hsBSBTwNennSollTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current Nennsollwert Trinkwasser in degrees celsius as string"
+    ::= { hsBSBTwNennSoll 2 }   
+
+
+--    hsBSBTwRedSoll                       hsbsb.1.7.2
+
+hsBSBTwRedSoll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Reduziersollwert Trinkwasser"
+    ::= { hsBSBTrinkwasser 2 }
+
+
+--   hsBSBTwRedSollTemp                    hsbsb.1.7.2.1
+
+hsBSBTwRedSollTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current Reduziersollwert Trinkwasser in degrees celsius"
+    ::= { hsBSBTwRedSoll 1 }   
+
+
+--    hsBSBTwRedSollTempTxt                hsbsb.1.7.2.2
+
+hsBSBTwRedSollTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "The current Reduziersollwert Trinkwasser in degrees celsius as string"
+    ::= { hsBSBTwRedSoll 2 }   
+
+--
+--    hsBSBTrinkwasserspeicher             hsbsb.1.8
+--
+
+hsBSBTrinkwasserspeicher OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Trinkwasserspeicher Menu entries"
+    ::= { heulesoftBSBMIB 8 }
+
+
+--
+--    hsBSBKessel                          hsbsb.1.9
+--
+
+hsBSBKessel OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Kessel Menu entries"
+    ::= { heulesoftBSBMIB 9 }
+
+
+--
+--    hsBSBHeizkreise                      hsbsb.1.11
+--
+
+hsBSBHeizkreise OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Heizkreise Menu entries"
+    ::= { heulesoftBSBMIB 11 }
+
+
+
+
+
+--    hsBSBHK1                             hsbsb.1.11.1
+
+hsBSBHK1 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Datenpunkte zu Heizkreis 1"
+    ::= { hsBSBHeizkreise 1 }
+
+
+--    hsBSBHK2                             hsbsb.1.11.2
+
+hsBSBHK2 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Datenpunkte zu Heizkreis 2"
+    ::= { hsBSBHeizkreise 2 }
+
+
+
+--    hsBSBHK3                             hsbsb.1.11.3
+
+hsBSBHK3 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Datenpunkte zu Heizkreis 3"
+    ::= { hsBSBHeizkreise 3 }
+
+
+--    hsBSBHK4                             hsbsb.1.11.4
+
+hsBSBHK4 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Datenpunkte zu Heizkreis 4"
+    ::= { hsBSBHeizkreise 4 }
+
+
+
+
+
+--
+--    hsBSBFerien                          hsbsb.1.12
+--
+
+hsBSBFerien OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Ferien Menu entries"
+    ::= { heulesoftBSBMIB 12 }
+
+
+
+--    hsBSBFerHK1                          hsbsb.1.12.1
+
+hsBSBFerHK1 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Feriendaten zu Heizkreis 1"
+    ::= { hsBSBFerien 1 }
+
+
+--    hsBSBFerHK2                          hsbsb.1.12.2
+
+hsBSBFerHK2 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Feriendaten zu Heizkreis 2"
+    ::= { hsBSBFerien 2 }
+
+
+
+--    hsBSBFerHK3                          hsbsb.1.12.3
+
+hsBSBFerHK3 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Feriendaten zu Heizkreis 3"
+    ::= { hsBSBFerien 3 }
+
+
+--    hsBSBFerHK4                          hsbsb.1.12.4
+
+hsBSBFerHK4 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Feriendaten zu Heizkreis 4"
+    ::= { hsBSBFerien 4 }
+
+
+
+
+
+--
+--    hsBSBDiagnose                        hsbsb.1.13
+--
+
+hsBSBDiagnose OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Diagnose Menu entries"
+    ::= { heulesoftBSBMIB 13 }
+
+--
+--    hsBSBDiaErzeuger                     hsbsb.1.13.1
+--
+
+hsBSBDiaErzeuger OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Diagnose Erzeuger"
+    ::= { hsBSBDiagnose  1 }
+
+
+
+--    hsBSBQuIn                            hsbsb.1.13.1.1
+
+hsBSBQuIn OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Temperatur Quelle Eintritt"
+    ::= { hsBSBDiaErzeuger 1 }
+
+
+--   hsBSBQuelleInTemp                     hsbsb.1.13.1.1.1
+
+hsBSBQuelleInTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Quelle Eintritt in degrees celsius"
+    ::= { hsBSBQuIn 1 }   
+
+
+--    hsBSBQuelleInTempTxt                 hsbsb.1.13.1.1.2
+
+hsBSBQuelleInTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Quelle Eintritt in degrees celsius as string"
+    ::= { hsBSBQuIn 2 }   
+
+
+--    hsBSBQuOut                           hsbsb.1.13.1.2
+
+hsBSBQuOut OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Temperatur Quelle Austritt"
+    ::= { hsBSBDiaErzeuger 2 }
+
+
+--   hsBSBQuelleOutTemp                     hsbsb.1.13.1.2.1
+
+hsBSBQuelleOutTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Quelle Austritt in degrees celsius"
+    ::= { hsBSBQuOut 1 }   
+
+
+--    hsBSBQuelleOutTempTxt                 hsbsb.1.13.1.2.2
+
+hsBSBQuelleOutTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Quelle Austritt in degrees celsius as string"
+    ::= { hsBSBQuOut 2 }   
+
+
+--    hsBSBVorlaufWP                       hsbsb.1.13.1.3
+
+hsBSBVorlaufWP OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Vorlauf WP"
+    ::= { hsBSBDiaErzeuger 3 }
+
+
+--   hsBSBVorlaufWPTemp                    hsbsb.1.13.1.3.1
+
+hsBSBVorlaufWPTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Vorlauf WP degrees celsius"
+    ::= { hsBSBVorlaufWP 1 }   
+
+
+--    hsBSBVorlaufWPTempTxt                hsbsb.1.13.1.3.2
+
+hsBSBVorlaufWPTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Vorlauf WP in degrees celsius as string"
+    ::= { hsBSBVorlaufWP 2 }   
+
+--    hsBSBRuecklaufWP                       hsbsb.1.13.1.4
+
+hsBSBRuecklaufWP OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Ruecklauf WP"
+    ::= { hsBSBDiaErzeuger 4 }
+
+
+--   hsBSBRuecklaufWPTemp                    hsbsb.1.13.1.4.1
+
+hsBSBRuecklaufWPTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Ruecklauf WP degrees celsius"
+    ::= { hsBSBRuecklaufWP 1 }   
+
+
+--    hsBSBRuecklaufWPTempTxt                hsbsb.1.13.1.4.2
+
+hsBSBRuecklaufWPTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur Ruecklauf WP in degrees celsius as string"
+    ::= { hsBSBRuecklaufWP 2 }   
+
+
+--    hsBSBRuecklaufSollWP                       hsbsb.1.13.1.5
+
+hsBSBRuecklaufSollWP OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "RuecklaufSoll WP"
+    ::= { hsBSBDiaErzeuger 5 }
+
+
+--   hsBSBRuecklaufSollWPTemp                    hsbsb.1.13.1.5.1
+
+hsBSBRuecklaufSollWPTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur RuecklaufSoll WP degrees celsius"
+    ::= { hsBSBRuecklaufSollWP 1 }   
+
+
+--    hsBSBRuecklaufSollWPTempTxt                hsbsb.1.13.1.5.2
+
+hsBSBRuecklaufSollWPTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Temperatur RuecklaufSoll WP in degrees celsius as string"
+    ::= { hsBSBRuecklaufSollWP 2 }   
+
+
+
+
+--
+--    hsBSBDiaVerbraucher                  hsbsb.1.13.2
+--
+
+hsBSBDiaVerbraucher OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Diagnose Verbraucher"
+    ::= { hsBSBDiagnose 2 }
+
+
+
+--
+--    hsBSBRoomt                           hsbsb.1.13.2.1
+--
+
+hsBSBRoomt OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Raumtemperaturen"
+    ::= { hsBSBDiaVerbraucher 1 }
+
+--    hsBSBRoom1t                           hsbsb.1.13.2.1.1
+
+hsBSBRoom1t OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Raumtemperatur RGT 1"
+    ::= { hsBSBRoomt 1 }
+
+
+--   hsBSBRoom1Temp                         hsbsb.1.13.2.1.1.1
+
+hsBSBRoom1Temp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Raumtemperatur RGT 1 degrees celsius"
+    ::= { hsBSBRoom1t 1 }   
+
+
+--    hsBSBRoom1TempTxt                     hsbsb.1.13.2.1.1.2
+
+hsBSBRoom1TempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Raumtemperatur RGT 1 in degrees celsius as string"
+    ::= { hsBSBRoom1t 2 }   
+
+
+
+
+
+
+
+--
+--    hsBSBRoomSoll                        hsbsb.1.13.2.2
+--
+
+hsBSBRoomSoll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Raumtemperaturen Soll"
+    ::= { hsBSBDiaVerbraucher 2 }
+
+--    hsBSBRoom1Soll                       hsbsb.1.13.2.2.1
+
+hsBSBRoom1Soll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Raumtemperatur Soll HK 1"
+    ::= { hsBSBRoomSoll 1 }
+
+
+--   hsBSBRoom1SollTemp                    hsbsb.1.13.2.2.1.1
+
+hsBSBRoom1SollTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Raumtemperatur Soll HK 1 degrees celsius"
+    ::= { hsBSBRoom1Soll 1 }   
+
+
+--    hsBSBRoom1SollTempTxt                hsbsb.1.13.2.2.1.2
+
+hsBSBRoom1SollTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Raumtemperatur Soll HK 1 in degrees celsius as string"
+    ::= { hsBSBRoom1Soll 2 }   
+
+
+
+
+
+
+
+
+
+--
+--    hsBSBVorlaufSoll                        hsbsb.1.13.2.3
+--
+
+hsBSBVorlaufSoll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Vorlauf Soll"
+    ::= { hsBSBDiaVerbraucher 3 }
+
+--    hsBSBVorlauf1Soll                       hsbsb.1.13.2.3.1
+
+hsBSBVorlauf1Soll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Vorlauf Soll HK 1"
+    ::= { hsBSBVorlaufSoll 1 }
+
+
+--   hsBSBVorlauf1SollTemp                    hsbsb.1.13.2.3.1.1
+
+hsBSBVorlauf1SollTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Vorlauf Soll HK 1 degrees celsius"
+    ::= { hsBSBVorlauf1Soll 1 }   
+
+
+--    hsBSBVorlauf1SollTempTxt                hsbsb.1.13.2.3.1.2
+
+hsBSBVorlauf1SollTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Vorlauf Soll HK 1 in degrees celsius as string"
+    ::= { hsBSBVorlauf1Soll 2 }   
+
+
+
+
+
+
+
+
+
+
+
+--
+--    hsBSBVorlauf                        hsbsb.1.13.2.4
+--
+
+hsBSBVorlauf OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Vorlauf"
+    ::= { hsBSBDiaVerbraucher 4 }
+
+--    hsBSBVorlauf1                       hsbsb.1.13.2.4.1
+
+hsBSBVorlauf1 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Vorlauf  HK 1"
+    ::= { hsBSBVorlauf 1 }
+
+
+--   hsBSBVorlauf1Temp                    hsbsb.1.13.2.4.1.1
+
+hsBSBVorlauf1Temp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Vorlauf  HK 1 degrees celsius"
+    ::= { hsBSBVorlauf1 1 }   
+
+
+--    hsBSBVorlauf1TempTxt                hsbsb.1.13.2.4.1.2
+
+hsBSBVorlauf1TempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Vorlauf  HK 1 in degrees celsius as string"
+    ::= { hsBSBVorlauf1 2 }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+--    hsBSBOutT                            hsbsb.1.13.2.5
+--
+
+hsBSBOutT OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Outside Temperatur Values"
+    ::= { hsBSBDiaVerbraucher 5 }
+
+
+--    hsBSBOutTAct                         hsbsb.1.13.2.5.1
+
+hsBSBOutTAct OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Normal outside Temperatur"
+    ::= { hsBSBOutT 1 }
+
+
+--   hsBSBOutTActTemp                      hsbsb.1.13.2.5.1.1
+
+hsBSBOutTActTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Normal outside Temperatur degrees celsius"
+    ::= { hsBSBOutTAct 1 }   
+
+
+--    hsBSBOutTActTempTxt                  hsbsb.1.13.2.5.1.2
+
+hsBSBOutTActTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Normal outside Temperatur in degrees celsius as string"
+    ::= { hsBSBOutTAct 2 }   
+
+
+
+--    hsBSBOutTGed                         hsbsb.1.13.2.5.2
+
+hsBSBOutTGed OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Gedämpfte outside Temperatur"
+    ::= { hsBSBOutT 2 }
+
+
+--   hsBSBOutTGedTemp                      hsbsb.1.13.2.5.2.1
+
+hsBSBOutTGedTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Gedämpfte outside Temperatur degrees celsius"
+    ::= { hsBSBOutTGed 1 }   
+
+
+--    hsBSBOutTGedTempTxt                  hsbsb.1.13.2.5.2.2
+
+hsBSBOutTGedTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Gedämpfte outside Temperatur in degrees celsius as string"
+    ::= { hsBSBOutTGed 2 }   
+
+
+
+
+--    hsBSBOutTGem                         hsbsb.1.13.2.5.3
+
+hsBSBOutTGem OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Gemischte outside Temperatur"
+    ::= { hsBSBOutT 3 }
+
+
+--   hsBSBOutTGemTemp                      hsbsb.1.13.2.5.3.1
+
+hsBSBOutTGemTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Gemischte outside Temperatur degrees celsius"
+    ::= { hsBSBOutTGem 1 }   
+
+
+--    hsBSBOutTGemTempTxt                  hsbsb.1.13.2.5.3.2
+
+hsBSBOutTGemTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Gemischte outside Temperatur in degrees celsius as string"
+    ::= { hsBSBOutTGem 2 }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+--    hsBSBTw                            hsbsb.1.13.2.6
+--
+
+hsBSBTw OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Trinkwasser Temperatur Values"
+    ::= { hsBSBDiaVerbraucher 6 }
+
+
+--    hsBSBTwSoll                         hsbsb.1.13.2.6.1
+
+hsBSBTwSoll OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Trinkwasser Soll Temperatur"
+    ::= { hsBSBTw 1 }
+
+
+--   hsBSBTwSollTemp                      hsbsb.1.13.2.6.1.1
+
+hsBSBTwSollTemp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Trinkwasser Soll Temperatur degrees celsius"
+    ::= { hsBSBTwSoll 1 }   
+
+
+--    hsBSBTwSollTempTxt                  hsbsb.1.13.2.6.1.2
+
+hsBSBTwSollTempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Trinkwasser Soll Temperatur in degrees celsius as string"
+    ::= { hsBSBTwSoll 2 }   
+
+
+
+
+--    hsBSBTwTemp1                         hsbsb.1.13.2.6.2
+
+hsBSBTwTemp1 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Trinkwasser 1 Temperatur"
+    ::= { hsBSBTw 2 }
+
+
+--   hsBSBTwTemp1Temp                      hsbsb.1.13.2.6.2.1
+
+hsBSBTwTemp1Temp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Trinkwasser 1 Temperatur degrees celsius"
+    ::= { hsBSBTwTemp1 1 }   
+
+
+--    hsBSBTwTemp1TempTxt                  hsbsb.1.13.2.6.2.2
+
+hsBSBTwTemp1TempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Trinkwasser 1 Temperatur in degrees celsius as string"
+    ::= { hsBSBTwTemp1 2 }   
+
+
+
+
+
+
+--    hsBSBTwTemp2                         hsbsb.1.13.2.6.3
+
+hsBSBTwTemp2 OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Trinkwasser 2 Temperatur"
+    ::= { hsBSBTw 3 }
+
+
+--   hsBSBTwTemp2Temp                      hsbsb.1.13.2.6.3.1
+
+hsBSBTwTemp2Temp   OBJECT-TYPE
+    SYNTAX      MilliDegree
+    UNITS       "C"
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Trinkwasser 2 Temperatur degrees celsius"
+    ::= { hsBSBTwTemp2 1 }   
+
+
+--    hsBSBTwTemp2TempTxt                  hsbsb.1.13.2.6.3.2
+
+hsBSBTwTemp2TempTxt   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Trinkwasser 2 Temperatur in degrees celsius as string"
+    ::= { hsBSBTwTemp2 2 }   
+
+
+--
+--    hsBSBLastUpdateInfo                  hsbsb.1.100
+--
+
+hsBSBLastUpdateInfo OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "Infos wann die letzten Daten aktualisiert wurden"
+    ::= { heulesoftBSBMIB 100 }
+
+--    hsBSBLastUpdateTime                  hsbsb.1.100.1
+
+hsBSBLastUpdateTime   OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "Zeitpunkt der letzten Updates vom AgentX"
+    ::= { hsBSBLastUpdateInfo 1 }   
+
+   
+
+--
+--    hsBSBConformance                   hsbsb.1.9999
+--
+
+hsBSBConformance OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "hsBSB Conformance Objects"
+    ::= { heulesoftBSBMIB 9999 }
+  
+
+  
+hsBSBConformanceGroups OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "hsBSB ConformanceGroup Objects"
+    ::= { hsBSBConformance 1 }
+
+
+hsBSBStatusDataGroup OBJECT-GROUP
+    OBJECTS
+    {
+            hsBSBStatusWP, hsBSBStatusWPTxt, hsBSBStatusWPRealVal,
+            hsBSBStatusTw, hsBSBStatusTwTxt, hsBSBStatusTwRealVal
+    }
+    STATUS current
+    DESCRIPTION
+    "hsBSBStatusDataGroup"
+    ::= { hsBSBConformanceGroups  1 }
+
+hsBSBTrinkwasserDataGroup OBJECT-GROUP
+    OBJECTS
+    {
+            hsBSBTwNennSollTemp, hsBSBTwNennSollTempTxt,
+            hsBSBTwRedSollTemp,  hsBSBTwRedSollTempTxt
+    }
+    STATUS current
+    DESCRIPTION
+    "hsBSBTrinkwasserDataGroup"
+    ::= { hsBSBConformanceGroups  7 }
+
+
+hsBSBDiagnoseDataGroup OBJECT-GROUP
+    OBJECTS
+    {
+            hsBSBQuelleInTemp, hsBSBQuelleInTempTxt,
+            hsBSBQuelleOutTemp, hsBSBQuelleOutTempTxt,
+            hsBSBVorlaufWPTemp, hsBSBVorlaufWPTempTxt,
+            hsBSBRoom1Temp, hsBSBRoom1TempTxt,
+            hsBSBRoom1SollTemp, hsBSBRoom1SollTempTxt,
+            hsBSBVorlauf1SollTemp, hsBSBVorlauf1SollTempTxt,
+            hsBSBVorlauf1Temp, hsBSBVorlauf1TempTxt,
+            hsBSBOutTActTemp, hsBSBOutTActTempTxt,
+            hsBSBOutTGedTemp, hsBSBOutTGedTempTxt,
+            hsBSBOutTGemTemp, hsBSBOutTGemTempTxt,
+            hsBSBTwSollTemp, hsBSBTwSollTempTxt,
+            hsBSBTwTemp1Temp, hsBSBTwTemp1TempTxt,
+            hsBSBTwTemp2Temp, hsBSBTwTemp2TempTxt
+    }
+    STATUS current
+    DESCRIPTION
+    "hsBSBTrinkwasserDataGroup"
+    ::= { hsBSBConformanceGroups  13 }
+
+
+hsBSBLastUpdateInfoDataGroup OBJECT-GROUP
+    OBJECTS
+    {
+            hsBSBLastUpdateTime
+    }
+    STATUS current
+    DESCRIPTION
+    "hsBSBTrinkwasserDataGroup"
+    ::= { hsBSBConformanceGroups  100 }
+
+    
+hsBSBCompliance  OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION
+       "hsBSB Complience Objects"
+    ::= { hsBSBConformance 2 }
+    
+    
+END
+

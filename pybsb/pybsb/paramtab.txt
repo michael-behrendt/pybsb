@@ -1,0 +1,307 @@
+﻿Diagnose Erzeuger / Aktuelle Gebläseansteuerung	113d305d	
+Diagnose Erzeuger / Anzahl Abtauversuche	593d08e2	status_counter2
+Diagnose Erzeuger / Betr'stunden Solarertrag	493d0893	status_runhours
+Diagnose Erzeuger / Betriebsanzeige FA	093d3034	
+Diagnose Erzeuger / Betriebsstunden Brennner	093d3036	status_runhours
+Diagnose Erzeuger / Betriebsstunden Elektroeinsatz Vorlauf	593d06c5	status_runhours
+Diagnose Erzeuger / Betriebsstunden Heizbetrieb	193d2feb	status_runhours
+Diagnose Erzeuger / Betriebsstunden Kollektorüberhitz	493d0717	status_runhours
+Diagnose Erzeuger / Betriebsstunden TWW	193d2fec	status_runhours
+Diagnose Erzeuger / Betriebsstunden Verdichter 1	593d0897	status_runhours
+Diagnose Erzeuger / Betriebsstunden Verdichter 2	593d0898	status_runhours
+Diagnose Erzeuger / Elektroeinsatz Vorlauf	053d09be	status_onoff
+Diagnose Erzeuger / Gebläsedrehzahl	113d0c82	
+Diagnose Erzeuger / Heissgastemp Maximum	593d05a8	status_temp64
+Diagnose Erzeuger / Heissgastemperatur 1	593d05bf	status_temp64
+Diagnose Erzeuger / Heissgastemperatur 2	593d05c0	status_temp64
+Diagnose Erzeuger / Ionisationsstrom	153d2ff0	
+Diagnose Erzeuger / Kesselrücklauftemperatur	113d051a	
+Diagnose Erzeuger / Kesselsollwert	0d3d0923	
+Diagnose Erzeuger / Kesseltemperatur	0d3d0519	status_temp64
+Diagnose Erzeuger / Kollektortemperatur 1	493d052a	status_temp64
+Diagnose Erzeuger / Kollektortemperatur 1 Max	493d053f	status_temp64
+Diagnose Erzeuger / Kollektortemperatur 1 Min	493d0718	status_temp64
+Diagnose Erzeuger / Kondensatorpumpe Q9	053d09b9	status_onoff
+Diagnose Erzeuger / Kältemitteltemperatur flüssig	593d05c8	status_temp64
+Diagnose Erzeuger / Quelle Austrittstemperatur	593d05ba	status_temp64
+Diagnose Erzeuger / Quelle Eintrittstemperatur	593d05b9	status_temp64
+Diagnose Erzeuger / Quelle Eintrittstemperatur Minimum	593d069c	status_temp64
+Diagnose Erzeuger / Quelle Eintrittstemperatur Minimum	593d0766	status_temp64
+Diagnose Erzeuger / Quellenpumpe Q8	053d09b8	status_onoff
+Diagnose Erzeuger / Relative Leistung	113d305f	
+Diagnose Erzeuger / Rest Stufe 1 Laufzeit Minimum	593d0bd6	status_runminutes
+Diagnose Erzeuger / Rest Stufe 1 Stillstandzeit Minimum	593d0bd4	status_runminutes
+Diagnose Erzeuger / Rest Stufe 2 Laufzeit Minimum	593d0bd7	status_runminutes
+Diagnose Erzeuger / Rest Stufe 2 Stillstandzeit Minimum	593d0bd5	status_runminutes
+Diagnose Erzeuger / Restzeit Abtausperrung	593d0a16	status_runminutes
+Diagnose Erzeuger / Restzeit Auto Reset	593d0bd8	status_runhours2
+Diagnose Erzeuger / Restzeit Begrenzung Quellentemp Min	593d0bcb	status_runhours
+Diagnose Erzeuger / Restzeit Zwangsabtauen	593d0a17	status_runhours
+Diagnose Erzeuger / Rücklauftemperatur Sollwert WP	593d0767	status_temp64
+Diagnose Erzeuger / Rücklauftemperatur WP	593d0537	status_temp64
+Diagnose Erzeuger / Sperrdauer Wärmepumpe	593d06c6	status_runhours
+Diagnose Erzeuger / Startzähler Brenner	093d3035	
+Diagnose Erzeuger / Startzähler Elektroeinsatz Vorlauf	593d06c0	status_counter
+Diagnose Erzeuger / Startzähler Verdichter 1	593d089b	status_counter
+Diagnose Erzeuger / Startzähler Verdichter 2	593d089c	status_counter
+Diagnose Erzeuger / Temperaturdifferenz Abtauen Istwert	593d0a15	status_temp64
+Diagnose Erzeuger / Temperaturdifferenz Abtauen Sollwert	593d0a14	status_temp64
+Diagnose Erzeuger / Temperaturdifferenz Kollektor 1 zu TWW	493d053b	status_temp64
+Diagnose Erzeuger / Temperaturspreizung Kondensator	593d05c3	status_temp64
+Diagnose Erzeuger / Temperaturspreizung Verdampfer	593d05c2	status_temp64
+Diagnose Erzeuger / Verdampfertemperatur	593d08e1	status_temp64
+Diagnose Erzeuger / Vorlauftemperatur WP	593d052d	status_temp64
+Diagnose Erzeuger / Wärmepumpe Verdichterfolge	593d05c9	status_fixwert
+Diagnose Erzeuger / Zusatnd Verdichter 2	053d09b6	status_onoff
+Diagnose Erzeuger / Zustand Prozessumkehrventil	053d0a02	status_fixwert
+Diagnose Erzeuger / Zustand Ventilator (K19)	053d0a03	status_fixwert
+Diagnose Erzeuger / Zustand Verdichter 1 (K1)	053d09b5	status_onoff
+Diagnose Erzeuger / Zähler Anzahl Sperren Wärmepumpe	593d06c1	status_counter
+Diagnose Verbraucher / Aussentemperatur	053d0521	status_temp64
+Diagnose Verbraucher / Aussentemperatur Maximum	053d056e	status_temp64
+Diagnose Verbraucher / Aussentemperatur Minimum	053d056f	status_temp64
+Diagnose Verbraucher / Außentemperatur gedämpft	053d05f0	status_temp64
+Diagnose Verbraucher / Außentemperatur gemischt	053d05f2	status_temp64
+Diagnose Verbraucher / Betriebsstunden Elektroeinsatz Trinkwasser	253d06c3	status_runhours
+Diagnose Verbraucher / Betriebsstunden Trinkwasserpumpe	253d06c2	status_runhours
+Diagnose Verbraucher / Mod Pumpe Sollwert	053d04a2	
+Diagnose Verbraucher / Pufferspeichertemperatur 1	053d0534	
+Diagnose Verbraucher / Raumsollwert 1	2d3d0593	status_temp64
+Diagnose Verbraucher / Raumsollwert 2	2e3d0593	status_temp64
+Diagnose Verbraucher / Raumtemperatur 1	2d3d051e	status_temp64
+Diagnose Verbraucher / Raumtemperatur 2	2e3d051e	status_temp64
+Diagnose Verbraucher / Startzähler Trinkwasserpumpe	253d06bd	status_counter
+Diagnose Verbraucher / TWW Ladetemperatur	253d0b33	
+Diagnose Verbraucher / Trinkwassersollwert	313d074b	status_temp64
+Diagnose Verbraucher / Trinkwassertemperatur 1	313d052f	status_temp64
+Diagnose Verbraucher / Trinkwassertemperatur 2	313d0530	status_temp64
+Diagnose Verbraucher / Vorlaufsollwert 1	213d0667	status_temp64
+Diagnose Verbraucher / Vorlaufsollwert 2	223d0667	status_temp64
+Diagnose Verbraucher / Vorlauftemperatur 1	213d0518	status_temp64
+Diagnose Verbraucher / Vorlauftemperatur 2	223d0518	status_temp64
+Diagnose Verbraucher / Vorlauftemperatur Istwert Kühlkreis 1	213d0a79	status_temp64
+Diagnose Verbraucher / Vorlauftemperatur-Sollwert resultierend KK1	213d0a1d	status_temp64
+Diagnose Verbraucher / Zustand Heizkreismischer Auf (Y1)	053d09a6	status_fixwert
+Diagnose Verbraucher / Zustand Heizkreismischer Zu (Y1)	053d09a7	status_fixwert
+Diagnose Verbraucher / Zustand Heizkreispumpe (Q2)	053d09a5	status_fixwert
+Diagnose Verbraucher / Zustand Heizkreispumpe (Q6)	053d09a8	status_fixwert
+Diagnose Verbraucher / Zustand Kühlkreismischer 1 Auf	053d0a82	status_fixwert
+Diagnose Verbraucher / Zustand Kühlkreismischer 1 Zu	053d0a83	status_fixwert
+Diagnose Verbraucher / Zustand Kühlkreispumpe 1	053d0a81	status_fixwert
+Diagnose Verbraucher / Zustand Trinkwasserpumpe (Q3)	053d09a3	status_onoff
+Diagnose Verbraucher / Zustand Kühlumlenkventil	053d0a01	status_fixwert
+Diagnose Verbraucher / Elektroeinsatz TWW	053d09ae	status_onoff
+Diagnose Verbraucher / Startzähler Elektroeinsatz TWW	253d06be	status_counter
+Fehler / Historie 1	053d06dd	
+Fehler / Historie 2	053d2ff5	
+Fehler / Historie 3	053d2ff9	
+Fehler / Historie 4	053d2ffd	
+Fehler / Historie 5	053d3001	
+Fehler / SW Diagnosecode	093d3072	
+Fehler / SW Diagnosecode 1	053d2ff3	
+Fehler / SW Diagnosecode 2	053d2ff7	
+Fehler / SW Diagnosecode 3	053d2ffb	
+Fehler / SW Diagnosecode 4	053d2ffe	
+Fehler / SW Diagnosecode 5	053d3002	
+Fehler / Vorlauftemperatur 2 Alarm	223d069d	
+Ferien Heizkreis 1 / Beginn	053d09c4	status_holiday
+Ferien Heizkreis 1 / Betriebsniveau	2d3d04c2	status_fixwert
+Ferien Heizkreis 1 / Ende	053d09c5	status_holiday
+Ferien Heizkreis 2 / Beginn	063d09c4	
+Ferien Heizkreis 2 / Betriebsniveau	2e3d04c2	
+Ferien Heizkreis 2 / Ende	063d09c5	
+Feuerungsautomat / Gebl'ansteuerung Betrieb. Max	0d3d304a	
+Feuerungsautomat / Gebl'ansteuerung Betrieb. Min	0d3d3049	
+Feuerungsautomat / Gebl'ansteuerung Durchlad	253d2fe8	
+Feuerungsautomat / Gebl'ansteuerung Vorlüftung	213d3038	
+Feuerungsautomat / Gebl'ansteuerung Zündung	0d3d3048	
+Feuerungsautomat / Nachlüftzeit	2d3d304c	
+Feuerungsautomat / Solldrehzahl Betrieb Max	0d3d2fcb	
+Feuerungsautomat / Solldrehzahl Betrieb Min	0d3d2fca	
+Feuerungsautomat / Solldrehzahl Durchlasung	253d2fe9	
+Feuerungsautomat / Solldrehzahl Vorlüftung	213d300f	
+Feuerungsautomat / Solldrehzahl Zündung	0d3d2fc9	
+Feuerungsautomat / Vorlüftzeit	2d3d3037	
+Heizkreis 1 / Ausschalt-Optimierung Max	2d3d0609	
+Heizkreis 1 / DrehzahlstufeAusleg'punkt	113d2f95	
+Heizkreis 1 / Einschalt-Optimierung Max	2d3d0607	
+Heizkreis 1 / Estrich Sollwert manuell	2d3d068a	
+Heizkreis 1 / Estrich-Funktion 	2d3d067b	
+Heizkreis 1 / Frostschutzsollwert	2d3d0592	status_temp64
+Heizkreis 1 / Kennlinie Adaption	2d3d060b	
+Heizkreis 1 / Kennlinie Steilheit	2d3d05f6	status_slope
+Heizkreis 1 / Kennlinie Verschiebung	2d3d0610	status_temp64
+Heizkreis 1 / Komfortsollwert	2d3d058e	status_temp64
+Heizkreis 1 / Norm Aussentemperatur	193d2f88	
+Heizkreis 1 / Pumpe-PWM Minimum	113d304f	
+Heizkreis 1 / Raumeinfluss	2d3d0603	status_counter2
+Heizkreis 1 / Raumtemperaturbegrenzung	2d3d0614	
+Heizkreis 1 / Reduziert-Anhebung Beginn	2d3d059e	
+Heizkreis 1 / Reduziert-Anhebung Ende	2d3d059d	
+Heizkreis 1 / Reduziertsollwert	2d3d0590	status_temp64
+Heizkreis 1 / Schnellabsenkung	2d3d05e8	
+Heizkreis 1 / Schnellaufheizung	2d3d0602	
+Heizkreis 1 / Sommer-/Winterheizgrenze	2d3d05fd	status_temp64
+Heizkreis 1 / Tagesheizgrenze	2d3d0640	status_temp64
+Heizkreis 1 / Vorlaufsoll NormAussemtemp	053d3050	
+Heizkreis 1 / Vorlaufsollwert Maximum	213d0662	
+Heizkreis 1 / Vorlaufsollwert Minimum	213d0663	
+Heizkreis 1 / dT Spreizung NormAussent	193d2f8a	
+Heizkreis 1 / dT Überhöhungsfaktor	253d2fe5	
+Heizkreis 2 / Antrieb Laufzeit	223d065a	
+Heizkreis 2 / Ausschalt-Optimierung Max	2e3d0609	
+Heizkreis 2 / Einschalt-Optimierung Max	2e3d0607	
+Heizkreis 2 / Estrich Sollwert manuell	2e3d068a	
+Heizkreis 2 / Estrich-Funktion	2e3d067b	
+Heizkreis 2 / Frostschutzsollwert	2e3d0592	
+Heizkreis 2 / Kennlinie Adaption	2e3d060b	
+Heizkreis 2 / Kennlinie Steilheit	2e3d05f6	
+Heizkreis 2 / Kennlinie Verschiebung	2e3d0610	
+Heizkreis 2 / Komfortsollwert	2e3d058e	
+Heizkreis 2 / Mischerüberhöhung	223d065d	
+Heizkreis 2 / Raumeinfluss	2e3d0603	
+Heizkreis 2 / Raumtemperaturbegrenzung	2e3d0614	
+Heizkreis 2 / Reduziert-Anhebung Beginn	2e3d059e	
+Heizkreis 2 / Reduziert-Anhebung Ende	2e3d059d	
+Heizkreis 2 / Reduziertsollwert	2e3d0590	
+Heizkreis 2 / Schnellabsenkung	2e3d05e8	
+Heizkreis 2 / Schnellaufheizung	2e3d0602	
+Heizkreis 2 / Sommer-/Winterheizgrenze	2e3d05fd	
+Heizkreis 2 / Standardwerte	063d05b2	
+Heizkreis 2 / Tagesheizgrenze	2e3d0640	
+Heizkreis 2 / Vorlaufsollwert Maximum	223d0662	status_temp64
+Heizkreis 2 / Vorlaufsollwert Minimum	223d0663	status_temp64
+Heizkreis 2 / Vorwahl / Phasen	063d0a8c	
+Kessel / Brennerpausenzeit Minimum	093d2f9a	
+Kessel / Frostschutz Ausschalttemp	093d2f85	
+Kessel / Frostschutz Einschalttemp	093d2f84	
+Kessel / Gebläse-PWM Hz Maximum	093d2f98	
+Kessel / Gebläse-PWM Reglerverzög	193d2fbf	
+Kessel / Gebläse-PWM Startwert DLH	2d3d2fd4	
+Kessel / Gebläseabschaltverzögerung	053d3076	
+Kessel / Gebläsedrehzahl Hz Maximum	0d3d2f94	
+Kessel / Leistung Nenn	093d3066	
+Kessel / Pumpennachlauftemp TWW	113d2f86	
+Kessel / Pumpennachlaufzeit HK's	113d3051	
+Kessel / Reglerverzögerung Dauer	2d3d2f9b	
+Kessel / SD Brennerpause	113d2f87	
+Kessel / Schaltdiff Kessel Aus Max	213d2f8e	
+Kessel / Schaltdiff Kessel Aus Min	213d2f8d	
+Kessel / Schaltdifferenz Kessel	213d2f8c	
+Kessel / Sollwert Handbetrieb	0d3d08eb	
+Kessel / Sollwert Maximum	0d3d092b	
+Kessel / Sollwert Minimum	0d3d092c	
+Konfiguration / Anlagenfrostschutz	053d05fe	
+Konfiguration / BA-Umschaltung HK's+TWW	053d0483	
+Konfiguration / Entwicklungs-Index	093d3033	
+Konfiguration / Funktion Eingang SolCl	093d3054	
+Konfiguration / Gerätefamilie	053d0002	
+Konfiguration / Gerätevariante	053d0003	
+Konfiguration / Heizkreis 1	053d04c0	
+Konfiguration / Heizkreis 2	063d04c0	
+Konfiguration / Hydraulisches Schema	2d3d2fea	
+Konfiguration / Konfig Raumthermostat 1	2d3d3073	
+Konfiguration / Konfig Raumthermostat 2	2e3d3073	
+Konfiguration / KonfigRg0.x	153d2f9d	
+Konfiguration / KonfigRg1.x	153d2f9e	
+Konfiguration / KonfigRg10.x	0d3d3017	
+Konfiguration / KonfigRg2.x	253d2f9f	
+Konfiguration / KonfigRg3.x	153d3064	
+Konfiguration / KonfigRg4.x	153d2fa1	
+Konfiguration / KonfigRg5.x	153d2fa2	
+Konfiguration / KonfigRg6.x	153d2fa3	
+Konfiguration / KonfigRg7.x	153d2fa4	
+Konfiguration / Objektverzeichnis-Version	053d0004	
+Konfiguration / Parameter	053d3078	
+Konfiguration / Pumpen/Ventilkick Dauer	113d2fb4	
+Konfiguration / Relaisausgang K2 LMU-Basis	153d2fcc	
+Konfiguration / Software-Version	053d000e	
+Konfiguration / TWW Pum'pause Verzögerung	113d2fe4	
+Konfiguration / TWW Pumpenpause Umsch UV	113d2fe3	
+Konfiguration / Zeitkonstante Gebäude	053d0600	
+Konfiguration / Zonen mit Zubringerpumpe	193d2fdc	
+No Menu / Brenner	05000213	
+No Menu / Heizbetrieb	2e3e0574	
+No Menu / SW Diagnosecode	053d0099	
+No Menu / Senden Raumtemperatur	2d3d0215	temp_64_00
+No Menu / Setzen Betriebsniveau HK1	2d3d0574	dir_fixwert
+No Menu / Status HK1	053d07a4	status_fixwert
+No Menu / Status HK2	053d07a6	status_fixwert
+No Menu / Status Heizkreis 1	2d000211	status_hk
+No Menu / Status Heizkreis 2	2e000211	status_hk
+No Menu / Status Heizkreis 3	2f000211	status_hk
+No Menu / Status Heizung	053d07b0	status_fixwert
+No Menu / Status Kessel	053d07aa	status_fixwert
+No Menu / Status Trinkwasser	053d07a2	status_fixwert
+No Menu / Trinkwasserbereitung	313d0571	dir_fixwert
+No Menu / Trinkwasserbereitung Statusicon	313d0212	status_tw
+No Menu / Trinkwasserbereitung Statusicon BC	31000212	status_tw
+No Menu / Zeit	0500006c	dir_datetime
+Notbetrieb / Notbetrieb	053d06ad	dir_onoff
+Status / Status Heizkreis 1	053d07a3	status_fixwert
+Status / Status Heizkreis 2	053d07a5	status_fixwert
+Status / Status Heizkreis P	053d07a7	status_fixwert
+Status / Status Kessel	053d07a9	status_fixwert
+Status / Status Pufferspeicher	053d07ab	status_fixwert
+Status / Status Solar	053d07ad	status_fixwert
+Status / Status Trinkwasser	053d07a1	status_fixwert
+Status / Status Wärmepumpe	053d07af	status_fixwert
+Trinkwasser / Freigabe	253d0722	
+Trinkwasser / Legionellenfkt Periodizität	313d0738	dir_fixwert
+Trinkwasser / Legionellenfkt Wochentag	313d075e	dir_fixwert
+Trinkwasser / Legionellenfkt Zirk’pumpe	313d08ab	dir_fixwert
+Trinkwasser / Legionellenfunktion	313d0759	status_fixwert
+Trinkwasser / Legionellenfunktion Sollwert	313d06bc	status_temp64
+Trinkwasser / Legionellenfunktion Verweildauer	313d0496	status_short
+Trinkwasser / Legionellenfunktion Zeitpunkt	313d075a	status_hourmin
+Trinkwasser / Nennsollwert	313d06b9	status_temp64
+Trinkwasser / Reduziertsollwert	313d06ba	status_temp64
+Trinkwasser / Trinkwasser Ladevorgang	313d0721	status_fixwert
+Trinkwasser / Trinkwasserfreigabe	253d0722	status_fixwert
+Trinkwasser / Zirkulationspumpe Freigabe	253d072e	
+Trinkwasser / Zirk’pumpe Taktbetrieb	253d0689	
+Trinkwasser-Speicher / Ladetemperatur Maximum	253d08a3	status_temp64
+Trinkwasser-Speicher / Nachlad'Übserhöh Schichtensp	313d3009	
+Trinkwasser-Speicher / Pumpe-PWM Durchladung	113d2f96	
+Trinkwasser-Speicher / Rückkühltemperatur	253d08bd	
+Trinkwasser-Speicher / Schaltdifferenz 1 Aus max	213d2f91	
+Trinkwasser-Speicher / Schaltdifferenz 1 Aus min	213d2f90	
+Trinkwasser-Speicher / Schaltdifferenz 1 ein	213d2f8f	
+Trinkwasser-Speicher / Schaltdifferenz 2 Aus max	213d2f93	
+Trinkwasser-Speicher / Schaltdifferenz 2 Aus min	213d2fd5	
+Trinkwasser-Speicher / Schaltdifferenz 2 ein	213d2f92	
+Trinkwasser-Speicher / Vorlaufsollwerterhöhung	253d0720	
+Wartung / Sonderbetrieb / Anzeige/Reset Meldungen.0	2d3d2fda	
+Wartung / Sonderbetrieb / Brennerstarts Intervall	2d3d2fd6	
+Wartung / Sonderbetrieb / Brennerstarts seit Wartung	253d2fdf	
+Wartung / Sonderbetrieb / Brennerstd seit Wartung	053d03f3	
+Wartung / Sonderbetrieb / Brennerstunden Intervall	053d03f1	
+Wartung / Sonderbetrieb / Gebläsedrehzahl Ion Strom	2d3d2fd8	
+Wartung / Sonderbetrieb / Handbetrieb	053d0075	
+Wartung / Sonderbetrieb / Meldung	053d0090	
+Wartung / Sonderbetrieb / Meldung Ion Strom	2d3d300c	
+Wartung / Sonderbetrieb / Quittierung Meldung	2d3d2fd9	
+Wartung / Sonderbetrieb / Reglerstopp Sollwert	093d3022	
+Wartung / Sonderbetrieb / Reglerstoppfunktion	093d3021	
+Wartung / Sonderbetrieb / Repetitionszeit Meldung	253d2fdd	
+Wartung / Sonderbetrieb / Schornsteinfegerfunktion	0d3d092a	
+Wartung / Sonderbetrieb / Wartungsintervall	053d05e1	
+Wartung / Sonderbetrieb / Zeit seit Wartung	053d05e2	
+Zeitprogramm 3/HKP / Standardwerte	073d05b2	
+Zeitprogramm 3/HKP / Vorwahl / Phasen	073d0a8c	
+Zeitprogramm 4 / Standardwerte	053d05b3	
+Zeitprogramm 4 / Montag	053d0aa0	zeit_prog
+Zeitprogramm 4 / Dienstag	053d0aa1	zeit_prog
+Zeitprogramm 4 / Mittwoch	053d0aa2	zeit_prog
+Zeitprogramm 4 / Donnerstag	053d0aa3	zeit_prog
+Zeitprogramm 4 / Freitag	053d0aa4	zeit_prog
+Zeitprogramm 4 / Samstag	053d0aa5	zeit_prog
+Zeitprogramm 4 / Sonntag	053d0aa6	zeit_prog
+Zeitprogramm Heizkreis 1 / Dienstag	053d0a8d	zeit_prog
+Zeitprogramm Heizkreis 1 / Donnerstag	053d0a8f	zeit_prog
+Zeitprogramm Heizkreis 1 / Freitag	053d0a90	zeit_prog
+Zeitprogramm Heizkreis 1 / Mittwoch	053d0a8e	zeit_prog
+Zeitprogramm Heizkreis 1 / Montag	053d0a8c	zeit_prog
+Zeitprogramm Heizkreis 1 / Samstag	053d0a91	zeit_prog
+Zeitprogramm Heizkreis 1 / Sonntag	053d0a92	zeit_prog
+Zeitprogramm Heizkreis 1 / Standardwerte	053d05b2	
